@@ -1,0 +1,46 @@
+body {
+    background-image: url("../img/blackboard.jpg");
+    background-size: cover;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    background-color: #9b643b;
+    font-size: 1.5em;
+}
+
+#container {
+    position: absolute;
+    height: calc(100% - 70px);
+    width: 100%;
+    background-color: red;
+    overflow: hidden;
+}
+
+#test {
+    position: absolute;
+    width: 960px;
+    height: 540px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#sound {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+}
+
+#nav_container {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 600px;
+    left: 50%;
+}
