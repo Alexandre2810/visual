@@ -74,6 +74,10 @@
                         type: 'bar',
                         data: chartdata,
                         options: {
+                            animation:{
+                                duration:4000,
+                                easing:'easeInBounce',
+                            },
                             legend:{
                                 labels:{
                                     fontColor:'rgb(255, 255, 255)',
