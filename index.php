@@ -49,7 +49,7 @@
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
-                                borderWidth: 5
+                                borderWidth: 1
                             }
                         ]
                     };
@@ -67,9 +67,10 @@
                                     }
                                 }]
                             }
-                        },
-                    })
-                })
+                        }
+  
+                    });
+                });
             }
         
         }
