@@ -46,7 +46,7 @@
                     }
 
                     var chartdata = {
-                        labels: joueurs,
+                        labels: "Joueurs",
                         datasets: [
                             {
                                 label: 'FDP',
