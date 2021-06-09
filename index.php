@@ -55,7 +55,8 @@ BODY {
                             }
                         ]
                     };
-
+                    console.log(score)
+                    console.log(joueurs)
                     var graphTarget = $("#graphCanvas");
 
                     var barGraph = new Chart(graphTarget, {
