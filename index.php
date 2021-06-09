@@ -49,7 +49,7 @@
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
-                                borderWidth: 1
+                                borderWidth: 5
                             }
                         ]
                     };
@@ -61,13 +61,15 @@
                         data: chartdata,
                         options: {
                             scales: {
-                                y: {
-                                    beginAtZero: true
-                                }
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
                             }
-                        }
-                    });
-                });
+                        },
+                    })
+                })
             }
         
         }

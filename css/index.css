@@ -23,31 +23,22 @@ footer {
 
 #acuity {
     position: absolute;
-    /* width: 400px;
-    height: 400px;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; */
-    border: black solid 1px;
-}
-
-.chartjs-render-monitor {
-    position: absolute;
-    width: 500px;
-    height: 500px;
+    /* width: 500px;
+    height: 500px; */
     margin: auto;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    border: black solid 1px;
 }
+
+
 
 canvas {
     display: block;
-    width: 400px !important;
-    height: 400px !important;
+    width: 700px !important;
+    height: 500px !important;
 }
 
 #sound {
