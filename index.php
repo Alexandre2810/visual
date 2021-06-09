@@ -76,7 +76,8 @@
                         options: {
                             legend:{
                                 labels:{
-                                    fontColor:'rgb(255, 255, 255)'
+                                    fontColor:'rgb(255, 255, 255)',
+                                    fontSize:40,
                                 }
                             },
                             scales: {
