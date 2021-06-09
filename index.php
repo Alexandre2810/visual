@@ -40,13 +40,27 @@
                     }
                     console.log(score)
                     var chartdata = {
-                        labels: joueurs,
+                        labels: ['Gamers','Non-Gamers','Exp1','Exp2','Exp3', 'Exp4'],
                         datasets: [
                             {
-                                label: 'Test clinic',
+                                label: 'Visual Acuity Score',
                                 data: score,
-                                backgroundColor: '#49e2ff',
-                                borderColor: '#46d5f1',
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
                                 hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
                                 borderWidth: 1
@@ -60,10 +74,25 @@
                         type: 'bar',
                         data: chartdata,
                         options: {
+                            legend:{
+                                labels:{
+                                    fontColor:'rgb(255, 255, 255)'
+                                }
+                            },
                             scales: {
                                 yAxes: [{
                                     ticks: {
+                                        fontSize:14,
+                                        fontColor: "white",
                                         beginAtZero: true
+                                    }
+                                }],
+                                xAxes: [{
+                                    ticks: {
+                                    fontColor: "white",
+                                    fontSize: 14,
+                                    stepSize: 1,
+                                    beginAtZero: true
                                     }
                                 }]
                             }

@@ -13,16 +13,23 @@ footer {
 }
 
 #container {
-    position: absolute;
+    position: relative;
+    margin: auto;
+    height: 40vh;
+    width: 40vw;
+    /*position: absolute;
     height: calc(100% - 70px);
     width: 100%;
     background-color: white;
     overflow: hidden;
 }
+*/
+}
 
 
 #acuity {
     position: absolute;
+    opacity:1;
     /* width: 500px;
     height: 500px; */
     margin: auto;
@@ -30,16 +37,17 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    border: black solid 1px;
+    border: white dotted 1px;
 }
 
 
 
-canvas {
+/*canvas {
     display: block;
     width: 700px !important;
     height: 500px !important;
 }
+*/
 
 #sound {
     position: absolute;
