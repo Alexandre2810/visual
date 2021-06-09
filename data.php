@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 
 $conn = mysqli_connect("localhost","root","","projetfinal");
 
-$sqlQuery = "SELECT joueurs,score FROM data__feuille_3";
+$sqlQuery = "SELECT joueurs,score FROM data___feuille_3";
 
 $result = mysqli_query($conn,$sqlQuery);
 
