@@ -48,7 +48,7 @@ BODY {
                         labels: joueurs,
                         datasets: [
                             {
-                                label: 'Test clinic',
+                                label: 'Score',
                                 backgroundColor: '#49e2ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
@@ -62,7 +62,17 @@ BODY {
 
                     var barGraph = new Chart(graphTarget, {
                         type: 'bar',
-                        data: chartdata
+                        data: chartdata,
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        }
+  
                     });
                 });
             }
