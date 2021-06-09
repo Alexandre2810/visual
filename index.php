@@ -27,26 +27,28 @@ BODY {
             showGraph();
         });
 
+        
+
         function showGraph()
         {
             {
-                $.post("data.php",
+                $.get("data.php",
                 function (data)
                 {
                     console.log(data);
-                     var joueurs = [];
+                    var joueurs = [];
                     var score = [];
 
                     for (var i in data) {
                         joueurs.push(data[i].joueurs);
-                        score.push(data[i].score);
+                        score.push(parseFloat(data[i].score.replace(',','.')));
                     }
-
+                    console.log(score)
                     var chartdata = {
                         labels: joueurs,
                         datasets: [
                             {
-                                label: 'Student Marks',
+                                label: 'Test clinic',
                                 backgroundColor: '#49e2ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
@@ -55,8 +57,7 @@ BODY {
                             }
                         ]
                     };
-                    console.log(score)
-                    console.log(joueurs)
+                    
                     var graphTarget = $("#graphCanvas");
 
                     var barGraph = new Chart(graphTarget, {
@@ -65,7 +66,9 @@ BODY {
                     });
                 });
             }
+        
         }
+        
         </script>
 
 </body>
