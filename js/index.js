@@ -2,6 +2,7 @@ var ctx = document.getElementById('acuity').getContext('2d');
 
 
 var acuityGraph = new Chart(ctx, {
+    scaleFontColor: "white",
     type: 'bar',
     data: {
         labels: ['Gamer', 'Non Gamer'],
@@ -16,7 +17,7 @@ var acuityGraph = new Chart(ctx, {
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
@@ -27,5 +28,4 @@ var acuityGraph = new Chart(ctx, {
         }
     }
 })
-
 
