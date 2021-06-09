@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<title>Creating Dynamic Data Graph using PHP and Chart.js</title>
-<style type="text/css">
-BODY {
-    width: 550PX;
-}
-
-#chart-container {
-    width: 100%;
-    height: auto;
-}
-</style>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/Chart.min.js"></script>
+    <meta charset="UTF-8">
+    <title>DataVisu</title>
+    <!-- Css reset -->
+	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <!-- Css -->
+	<link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
 
 
 </head>
 <body>
-    <div id="chart-container">
-        <canvas id="graphCanvas"></canvas>
+    <div id="container">
+        <canvas id="acuity"></canvas>
     </div>
 
     <script>
@@ -48,17 +43,18 @@ BODY {
                         labels: joueurs,
                         datasets: [
                             {
-                                label: 'Score',
+                                label: 'Test clinic',
+                                data: score,
                                 backgroundColor: '#49e2ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
-                                data: score
+                                borderWidth: 1
                             }
                         ]
                     };
                     
-                    var graphTarget = $("#graphCanvas");
+                    var graphTarget = $("#acuity");
 
                     var barGraph = new Chart(graphTarget, {
                         type: 'bar',
@@ -82,4 +78,17 @@ BODY {
         </script>
 
 </body>
+<footer>
+    <div id="sound">
+        <div id="icon_sound"></div>
+        <span id="toggle">Yes</span>
+    </div>
+    <nav id="nav_container">
+        <div id="part0">0</div>
+        <div id="part1">1</div>
+        <div id="part2">2</div>
+        <div id="part3">3</div>
+        <div id="part4">4</div>
+    </nav>
+</footer>
 </html>
