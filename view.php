@@ -1,26 +1,16 @@
-<?php
-$pdo = new PDO("mysql:host=localhost;dbname=projetfinal;charset=utf8", "root", "", [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-]);
-$stmt = $pdo->prepare("Select * from data___feuille_3
-where joueurs = 'Gamers'");
-$stmt2 = $pdo->prepare("Select * from data___feuille_3
-where joueurs = 'Non-gamers'");
-$stmt->execute();
-$stmt2->execute();
-
-
-$test = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$test2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-
-var_dump($test, $test2)
-?>
-
 <!DOCTYPE html>
 <html lang="eng">
+    
 
 <head>
     <meta charset="UTF-8">
+    <title>DataVisu</title>
+    <!-- Css reset -->
+	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <!-- Css -->
+	<link rel="stylesheet" href="css/visu.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
 <header>
@@ -28,7 +18,57 @@ var_dump($test, $test2)
 </header>
 <body>
     <h1>YO</h1>
+    <div id="chart-container">
+        <canvas id="graphCanvas"></canvas>
+    </div>
 
+    <script>
+        $(document).ready(function () {
+            showGraph();
+        });
+
+
+        function showGraph()
+        {
+            {
+                $.post("data.php",
+                function (data)
+                {
+                    console.log(data);
+                    var joueurs = [];
+                    var score = [];
+                    
+
+                    for (var i in data) {
+                        joueurs.push(data[i].joueurs);
+                        score.push(data[i].score);
+                        
+                    }
+
+                    var chartdata = {
+                        labels: joueurs,
+                        datasets: [
+                            {
+                                label: 'FDP',
+                                backgroundColor: '#49e2ff',
+                                borderColor: '#46d5f1',
+                                hoverBackgroundColor: '#CCCCCC',
+                                hoverBorderColor: '#666666',
+                                data: score,
+                            }
+                        ]
+                    };
+
+                    var graphTarget = $("#graphCanvas");
+
+                    var barGraph = new Chart(graphTarget, {
+                        type: 'bar',
+                        data: chartdata
+                    });
+                });
+            }
+        }
+        </script>
 </body>
 
 </html>
