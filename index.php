@@ -113,7 +113,7 @@
 </body>
 <footer>
     <div id="sound">
-        <div id="icon_sound"></div>
+        <div id="icon_sound"><img src="img/sound_on" alt="icone son" id="son_on"></div>
         <span id="toggle">Yes</span>
     </div>
     <nav id="nav_container">

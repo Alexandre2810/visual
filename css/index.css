@@ -60,9 +60,24 @@ footer {
 */
 
 #sound {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 100px;
+    height: 70px;
+}
+
+
+#son_on {
     position: absolute;
     width: 100px;
     height: 70px;
+}
+
+#toggle {
+    position: absolute;
+    top: 25px;
+    left: 110px;
 }
 
 #nav_container {
@@ -71,4 +86,5 @@ footer {
     flex-direction: row;
     width: 600px;
     left: 50%;
+    top: 25px;
 }
