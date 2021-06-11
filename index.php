@@ -14,6 +14,7 @@
 </head>
 <body>
     <div id="container">
+    <p id="actuity_text">Blu blu blu blu blu blu</p>
         <canvas id="acuity"></canvas>
     </div>
 

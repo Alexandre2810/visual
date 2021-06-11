@@ -34,6 +34,12 @@ footer {
 */
 }
 
+#acuity_text {
+    position: absolute;
+    margin: auto;
+    top: 4vh;
+    left: 150px;
+}
 
 #acuity {
     position: absolute;
@@ -41,13 +47,11 @@ footer {
     /* width: 500px;
     height: 500px; */
     margin: auto;
-    top: 0;
-    left: 0;
+    top: 4vh;
+    left: 250px;
     right: 0;
     bottom: 0;
     border: white dotted 1px;
-    top: 4vh;
-    left: 250px;
 }
 
 
