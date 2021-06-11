@@ -7,13 +7,12 @@ var options = {
     remoteFilename: 'database' // <- File with extension .json
   };
    
-  // Require GithubDB
 var GithubDB = require('..').default;
   // Initialize it with the options from above.
 var githubDB = new GithubDB(options);
    
   // Authenticate Github DB -> grab a token from here https://github.com/settings/tokens
-githubDB.auth(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);
+githubDB.auth();
    
   // Connect to repository
  githubDB.connectToRepo();
