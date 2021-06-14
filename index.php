@@ -133,7 +133,6 @@
         <div id="part1">1</div>
         <div id="part2">2</div>
         <div id="part3">3</div>
-        <div id="part4">4</div>
     </nav>
 </footer>
 </html>
