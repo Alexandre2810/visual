@@ -6,18 +6,33 @@
     <!-- Css reset -->
 	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <!-- Css -->
+	<link rel="stylesheet" href="css/global.css">
 	<link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
 
 
 </head>
-<body>
-    <div id="container">
-    <p id="actuity_text">Blu blu blu blu blu blu</p>
-        <canvas id="acuity"></canvas>
-    </div>
 
+<body>
+    <header>
+        <picture id="sound">
+            <img src="img/sound_on" alt="icone son" id="son_on">
+        </picture>
+    </header>
+    <div id="container">
+        <p id="acuity_text">Blu blu blu blu blu blu</p>
+        <div class="contain-canvas">
+            <canvas id="acuity"></canvas>
+        </div>
+    <picture>
+        <img src="img/arrow_left" alt="flèche vers la gauche" id="left_arrow">
+    </picture>
+    <picture>
+        <img src="img/arrow_right" alt="flèche vers la droite" id="right_arrow">
+    </picture>
+        
+    </div>
     <script>
         $(document).ready(function () {
             showGraph();
@@ -82,7 +97,7 @@
                             legend:{
                                 labels:{
                                     fontColor:'rgb(255, 255, 255)',
-                                    fontSize:40,
+                                    fontSize:30,
                                 }
                             },
                             scales: {
@@ -110,13 +125,9 @@
         
         }
         </script>
-
+   
 </body>
 <footer>
-    <div id="sound">
-        <div id="icon_sound"><img src="img/sound_on" alt="icone son" id="son_on"></div>
-        <span id="toggle">Yes</span>
-    </div>
     <nav id="nav_container">
         <div id="part0">0</div>
         <div id="part1">1</div>
