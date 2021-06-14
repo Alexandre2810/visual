@@ -16,8 +16,12 @@
 
 <body>
     <div id="container">
-        <img src="img/sound_on" alt="icone son" id="sound">
-        <p id="acuity_text">Blu blu blu blu blu blu</p>
+        <picture>
+            <img src="img/sound_on" alt="icone son" id="sound">
+        </picture>
+        <p class="acuity_text">Blu blu blu blu blu blu</p>
+        <p class="test2_text">Bla bla bla bla bla bla</p>
+        <p class="test3_text">Blo blo blo blo blo blo</p>
         <div class="contain-canvas">
             <canvas id="acuity"></canvas>
         </div>
@@ -146,4 +150,5 @@
         
         }
     </script>
+    <script src="js/index.js"></script>
 </html>

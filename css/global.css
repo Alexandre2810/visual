@@ -75,3 +75,36 @@ footer {
     margin: 0 20px;
     cursor: pointer;
 }
+
+.acuity_text, .test2_text, .test3_text {
+    display: none;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 150px;
+    font-size: 1.5em;
+    font-family: "Craie";
+    color: white;
+}
+
+.hide_acuity_text {
+    display: block;
+}
+
+.hide_test2_text {
+    display: block;
+}
+
+.hide_test3_text {
+    display: block;
+}
+
+
+
+#acuity {
+    position: absolute;
+    opacity:1;
+    margin: auto;
+    border: white dotted 1px;
+}
+
