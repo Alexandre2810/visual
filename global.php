@@ -16,15 +16,21 @@
 
 <body>
     <header>
-        <div id="sound">
+        <picture id="sound">
             <img src="img/sound_on" alt="icone son" id="son_on">
-        </div>
+        </picture>
     </header>
     <div id="container">
         <p id="acuity_text">Blu blu blu blu blu blu</p>
         <div class="contain-canvas">
             <canvas id="acuity"></canvas>
         </div>
+    <picture>
+        <img src="img/arrow_left" alt="flèche vers la gauche" id="left_arrow">
+    </picture>
+    <picture>
+        <img src="img/arrow_right" alt="flèche vers la droite" id="right_arrow">
+    </picture>
         
     </div>
     <script>

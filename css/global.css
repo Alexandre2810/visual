@@ -19,6 +19,22 @@ footer {
     color: white;
 }
 
+#left_arrow {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 100px;
+    height: 70px;
+}
+
+#right_arrow {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 100px;
+    height: 70px;
+}
+
 #container {
     position: absolute;
     margin: auto;
