@@ -15,12 +15,8 @@
 </head>
 
 <body>
-    <header>
-        <picture id="sound">
-            <img src="img/sound_on" alt="icone son" id="son_on">
-        </picture>
-    </header>
     <div id="container">
+        <img src="img/sound_on" alt="icone son" id="sound">
         <p id="acuity_text">Blu blu blu blu blu blu</p>
         <div class="contain-canvas">
             <canvas id="acuity"></canvas>
@@ -33,6 +29,16 @@
     </picture>
         
     </div>
+   
+</body>
+<footer>
+    <nav id="nav_container">
+        <img src="img/post-it-0" alt="post it 0"  id="part0">
+        <img src="img/post-it-1" alt="post it 1" id="part1">
+        <img src="img/post-it-2" alt="post it 2" id="part2">
+        <img src="img/post-it-3" alt="post it 3" id="part3">
+    </nav>
+</footer>
     <script>
         $(document).ready(function () {
             showGraph();
@@ -139,15 +145,5 @@
             }
         
         }
-        </script>
-   
-</body>
-<footer>
-    <nav id="nav_container">
-        <div id="part0">0</div>
-        <div id="part1">1</div>
-        <div id="part2">2</div>
-        <div id="part3">3</div>
-    </nav>
-</footer>
+    </script>
 </html>
