@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Craie";
+    src: url("../fonts/BaconKingdom.ttf");
+}
+
+body {
+    background-image: url("../img/blackboard.jpg");
+    background-size: cover;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    background-image: url('../img/Bois.jpg');
+    font-size: 1.5em;
+    font-family: "Craie";
+    color: white;
+}
+
+#left_arrow {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 100px;
+    height: 70px;
+}
+
+#right_arrow {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 100px;
+    height: 70px;
+}
+
+#container {
+    position: absolute;
+    margin: auto;
+    position: absolute;
+    height: calc(100% - 70px);
+    width: 100%;
+}
+
+.contain-canvas {
+    position: absolute;
+    top: calc(30%);
+    bottom: 0;
+    left: 50%;
+    height: 40vh;
+    width: 40vw;
+}
+
+#sound {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 100px;
+    height: 70px;
+    top: 5px;
+    left: 5px;
+}
+
+
+#nav_container {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 600px;
+    left: 50%;
+    top: 25px;
+}
