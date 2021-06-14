@@ -22,8 +22,6 @@
             showGraph();
         });
 
-        
-
         function showGraph()
         {
             {
@@ -101,7 +99,6 @@
                     });
                 });
             }
-        
         }
         </script>
 

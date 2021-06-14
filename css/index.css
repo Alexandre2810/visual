@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 @font-face {
     font-family: "Craie";
     src: url("../fonts/BaconKingdom.ttf");
@@ -16,10 +17,21 @@ footer {
     height: 70px;
     bottom: 0;
     background-color: #9b643b;
+=======
+.acuity_text {
+    /* position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 150px; */
+    width: auto;
+    max-width: 40%;
+    height: auto;
+>>>>>>> Stashed changes
     font-size: 1.5em;
     font-family: "Craie";
 }
 
+<<<<<<< Updated upstream
 #container {
     position: relative;
     margin: auto;
@@ -37,6 +49,9 @@ footer {
 
 #acuity {
     position: absolute;
+=======
+.acuity {
+>>>>>>> Stashed changes
     opacity:1;
     /* width: 500px;
     height: 500px; */

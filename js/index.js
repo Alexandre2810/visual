@@ -28,4 +28,3 @@ var acuityGraph = new Chart(ctx, {
         }
     }
 })
-
