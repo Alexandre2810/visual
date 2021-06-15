@@ -1,0 +1,3 @@
+<?php
+$text_acuity = "Ici, des joueurs de jeux vidéos ont été comparés à des non-joueurs au cours de plusieurs expériences. Les participants ont été testés binoculairement avant les expériences et le groupe des joueurs a montré des résultats initiaux supérieurs au non-joueurs. Nous avons mené une étude d'entraînement intensif ( 50h sur 9 semaines ) sur le groupe des non-joueurs. Les résultats des différentes expériences nous montrent que les jeux vidéos améliorent la vision sur plusieurs points, les participants se sont considérablement améliorés."
+?>

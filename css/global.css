@@ -126,7 +126,7 @@ h1 {
 }
 
 .test0_text::before {
-    content: attr(first);
+    content: attr(data-first);
     visibility: visible;
     position: absolute;
     top: 0;
@@ -144,7 +144,7 @@ h1 {
 }
 
 .acuity_text::before {
-    content: "blublublub";
+    content: attr(data-second);
     visibility: visible;
     position: absolute;
     top: 0;
@@ -162,7 +162,7 @@ h1 {
 }
 
 .test2_text::before {
-    content: attr(third);
+    content: attr(data-third);
     visibility: visible;
     position: absolute;
     top: 0;
@@ -180,7 +180,7 @@ h1 {
 }
 
 .test3_text::before {
-    content: attr(fourth);
+    content: attr(data-fourth);
     visibility: visible;
     position: absolute;
     top: 0;
