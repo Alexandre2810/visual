@@ -1,5 +1,8 @@
 var ctx = document.getElementById('acuity').getContext('2d');
 
+async function getData(){
+    const response = await fetch('')
+}
 
 var acuityGraph = new Chart(ctx, {
     scaleFontColor: "white",

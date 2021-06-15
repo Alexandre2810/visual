@@ -16,5 +16,5 @@ while ($entry = mysqli_fetch_assoc($result)) {
 mysqli_close($conn);
 
 
-echo json_encode($data);
+echo json_encode($data, JSON_PRETTY_PRINT);
 ?>
