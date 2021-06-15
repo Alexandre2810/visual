@@ -121,3 +121,36 @@ h1 {
     border: white dotted 1px;
 }
 
+p {
+    visibility: hidden;
+}
+
+p::before {
+    content: attr(data-text);
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    border-right: hidden;
+    overflow: hidden;
+    animation: animate 3s linear forwards
+}
+
+
+
+@keyframes animate {
+    0%
+    {
+        width: 0;
+        border-right: hidden;
+    }
+    100%
+    {
+        width: 100%;
+        border-right: hidden;
+    }
+    
+}

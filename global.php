@@ -23,8 +23,8 @@
         <h1 class="title1">L'acuite visuelle</h1>
         <h1 class="title2">Michel</h1>
         <h1 class="title3">Drucker</h1>
-        
-        <p class="test0_text">BOOBOBO</p>
+
+        <p data-text="BOOBOBO" class="test0_text">BOOBOBO</p>
         <p class="acuity_text">Blu blu blu blu blu blu</p>
         <p class="test2_text">Bla bla bla bla bla bla</p>
         <p class="test3_text">Blo blo blo blo blo blo</p>
