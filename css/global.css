@@ -41,6 +41,8 @@ footer {
     position: absolute;
     height: calc(100% - 80px);
     width: 100%;
+    font-family: "Craie";
+    color: white;
 }
 
 .contain-canvas {
@@ -76,29 +78,39 @@ footer {
     cursor: pointer;
 }
 
-.acuity_text, .test2_text, .test3_text {
+.test0_text, .acuity_text, .test2_text, .test3_text {
     display: none;
     position: absolute;
     margin: auto;
     top: 50%;
     left: 150px;
     font-size: 1.5em;
-    font-family: "Craie";
-    color: white;
 }
 
-.hide_acuity_text {
+h1 {
+    display: none;
+    position: absolute;
+    top: 5px;
+    font-size: 2.5em;
+    left: 30%;
+}
+
+.intro, .show_title1, .show_title2, .show_title3 {
     display: block;
 }
 
-.hide_test2_text {
+.hide_intro {
+    display: none;
+}
+
+
+.test0_text, .show_acuity_text, .show_test2_text, .show_test3_text {
     display: block;
 }
 
-.hide_test3_text {
-    display: block;
+.hide_test0_text {
+    display: none;
 }
-
 
 
 #acuity {

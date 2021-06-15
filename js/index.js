@@ -1,36 +1,100 @@
+const text0 = document.querySelector('.test0_text')
 const text1 = document.querySelector('.acuity_text')
 const text2 = document.querySelector('.test2_text')
 const text3 = document.querySelector('.test3_text')
 
-// const button0 = document.querySelector('#part0')
+const button0 = document.querySelector('#part0')
 const button1 = document.querySelector('#part1')
 const button2 = document.querySelector('#part2')
 const button3 = document.querySelector('#part3')
 
+const rightArrow = document.querySelector('#right_arrow')
+const leftArrow = document.querySelector('#left_arrow')
 
-// button0.addEventListener('click', nbPart(button0))
+var nbPage = 0
+
+button0.addEventListener('click', Part0)
 button1.addEventListener('click', Part1)
 button2.addEventListener('click', Part2)
 button3.addEventListener('click', Part3)
 
+rightArrow.addEventListener('click', rightPage)
+leftArrow.addEventListener('click', leftPage)
 
 
+function rightPage() {
+    console.log(nbPage)
+    if (nbPage == 0) {
+        Part1()
+    }
+    else if (nbPage == 1) {
+        Part2()
+    }
+    else if (nbPage == 2) {
+        Part3()
+    }
+}
+
+function leftPage() {
+    console.log(nbPage)
+    if (nbPage == 1) {
+        Part0()
+    }
+    else if (nbPage == 2) {
+        Part1()
+    }
+    else if (nbPage == 3) {
+        Part2()
+    }
+}
+
+function Part0 () {
+    affPart0()
+    nbPage = 0
+}
 
 function Part1 () {
-    text1.classList.add('hide_acuity_text')
-    text2.classList.remove('hide_test2_text')
-    text3.classList.remove('hide_test3_text')        
+    affPart1()
+    nbPage = 1
 }
 
 
 function Part2 () {    
-    text1.classList.remove('hide_acuity_text')
-    text2.classList.add('hide_test2_text')
-    text3.classList.remove('hide_test3_text')
+    affPart2()
+    nbPage = 2
 }
 
 function Part3 () {
-    text1.classList.remove('hide_acuity_text')
-    text2.classList.remove('hide_test2_text')
-    text3.classList.add('hide_test3_text')
+    affPart3()
+    nbPage = 3
 }
+
+function affPart0 () {
+    text0.classList.remove('hide_test0_text')
+    text1.classList.remove('show_acuity_text')
+    text2.classList.remove('show_test2_text')
+    text3.classList.remove('show_test3_text')  
+}
+
+function affPart1 () {
+    text0.classList.add('hide_test0_text')
+    text1.classList.add('show_acuity_text')
+    text2.classList.remove('show_test2_text')
+    text3.classList.remove('show_test3_text')  
+    
+}
+
+function affPart2 () {
+    text0.classList.add('hide_test0_text')
+    text1.classList.remove('show_acuity_text')
+    text2.classList.add('show_test2_text')
+    text3.classList.remove('show_test3_text')
+}
+
+function affPart3 () {
+    text0.classList.add('hide_test0_text')
+    text1.classList.remove('show_acuity_text')
+    text2.classList.remove('show_test2_text')
+    text3.classList.add('show_test3_text')
+}
+
