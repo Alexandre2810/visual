@@ -92,7 +92,8 @@ h1 {
     position: absolute;
     top: 5px;
     font-size: 2.5em;
-    left: 30%;
+    width: 100%;
+    text-align: center;
 }
 
 .intro, .show_title1, .show_title2, .show_title3 {
