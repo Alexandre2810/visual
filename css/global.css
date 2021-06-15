@@ -11,7 +11,7 @@ body {
 footer {
     position: absolute;
     width: 100%;
-    height: 70px;
+    height: 80px;
     bottom: 0;
     background-image: url('../img/Bois.png');
     font-size: 1.5em;
@@ -19,28 +19,30 @@ footer {
     color: white;
 }
 
-#left_arrow {
+#right_arrow, #left_arrow {
     position: absolute;
     bottom: 5px;
-    left: 5px;
     width: 100px;
     height: 70px;
+    cursor: pointer;
+}
+
+#left_arrow {
+    left: 5px;
 }
 
 #right_arrow {
-    position: absolute;
-    bottom: 5px;
     right: 5px;
-    width: 100px;
-    height: 70px;
 }
 
 #container {
     position: absolute;
     margin: auto;
     position: absolute;
-    height: calc(100% - 70px);
+    height: calc(100% - 80px);
     width: 100%;
+    font-family: "Craie";
+    color: white;
 }
 
 .contain-canvas {
@@ -53,21 +55,157 @@ footer {
 }
 
 #sound {
-    display: flex;
     position: absolute;
-    flex-direction: row;
     width: 100px;
-    height: 70px;
+    height: 60px;
     top: 5px;
     left: 5px;
+    cursor: pointer;
 }
-
 
 #nav_container {
     display: flex;
     position: absolute;
     flex-direction: row;
     width: 600px;
-    left: 50%;
-    top: 25px;
+    left: 35%;
+}
+
+#part0, #part1, #part2, #part3 {
+    height: 70px;
+    width: 70px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.test0_text, .acuity_text, .test2_text, .test3_text {
+    display: none;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 150px;
+    font-size: 1.5em;
+}
+
+h1 {
+    display: none;
+    position: absolute;
+    top: 5px;
+    font-size: 2.5em;
+    width: 100%;
+    text-align: center;
+}
+
+.intro, .show_title1, .show_title2, .show_title3 {
+    display: block;
+}
+
+.hide_intro {
+    display: none;
+}
+
+
+.test0_text, .show_acuity_text, .show_test2_text, .show_test3_text {
+    display: block;
+}
+
+.hide_test0_text {
+    display: none;
+}
+
+
+#acuity {
+    position: absolute;
+    opacity:1;
+    margin: auto;
+    border: white dotted 1px;
+}
+
+.test0_text {
+    visibility: hidden;
+}
+
+.test0_text::before {
+    content: attr(first);
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    border-right: hidden;
+    overflow: hidden;
+    animation: animate 3s linear forwards
+}
+
+.acuity_text {
+    visibility: hidden;
+}
+
+.acuity_text::before {
+    content: "blublublub";
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    border-right: hidden;
+    overflow: hidden;
+    animation: animate 3s linear forwards
+}
+
+.test2_text {
+    visibility: hidden;
+}
+
+.test2_text::before {
+    content: attr(third);
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    border-right: hidden;
+    overflow: hidden;
+    animation: animate 3s linear forwards
+}
+
+.test3_text {
+    visibility: hidden;
+}
+
+.test3_text::before {
+    content: attr(fourth);
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    border-right: hidden;
+    overflow: hidden;
+    animation: animate 3s linear forwards
+}
+
+
+
+
+@keyframes animate {
+    0%
+    {
+        width: 0;
+        border-right: hidden;
+    }
+    100%
+    {
+        width: 100%;
+        border-right: hidden;
+    }
+    
 }
