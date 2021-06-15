@@ -121,12 +121,12 @@ h1 {
     border: white dotted 1px;
 }
 
-p {
+.test0_text {
     visibility: hidden;
 }
 
-p::before {
-    content: attr(data-text);
+.test0_text::before {
+    content: attr(first);
     visibility: visible;
     position: absolute;
     top: 0;
@@ -138,6 +138,61 @@ p::before {
     overflow: hidden;
     animation: animate 3s linear forwards
 }
+
+.acuity_text {
+    visibility: hidden;
+}
+
+.acuity_text::before {
+    content: "blublublub";
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    border-right: hidden;
+    overflow: hidden;
+    animation: animate 3s linear forwards
+}
+
+.test2_text {
+    visibility: hidden;
+}
+
+.test2_text::before {
+    content: attr(third);
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    border-right: hidden;
+    overflow: hidden;
+    animation: animate 3s linear forwards
+}
+
+.test3_text {
+    visibility: hidden;
+}
+
+.test3_text::before {
+    content: attr(fourth);
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    border-right: hidden;
+    overflow: hidden;
+    animation: animate 3s linear forwards
+}
+
 
 
 

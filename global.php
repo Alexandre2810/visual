@@ -16,18 +16,18 @@
 
 <body>
     <div id="container">
-        <picture>
-            <img src="img/sound_on" alt="icone son" id="sound">
-        </picture>
         <h1 class="intro">Les jeux videos ameliorent-ils la vue ?</h1>
         <h1 class="title1">L'acuite visuelle</h1>
         <h1 class="title2">Michel</h1>
         <h1 class="title3">Drucker</h1>
-
-        <p data-text="BOOBOBO" class="test0_text">BOOBOBO</p>
-        <p class="acuity_text">Blu blu blu blu blu blu</p>
-        <p class="test2_text">Bla bla bla bla bla bla</p>
-        <p class="test3_text">Blo blo blo blo blo blo</p>
+        <picture>
+            <img src="img/sound_on" alt="icone son" id="sound">
+        </picture>
+        
+        <p first="BOOBOBO" class="test0_text">BOOBOBO</p>
+        <p second="michel"class="acuity_text">Blu blu blu blu blu blu</p>
+        <p third="michmich"class="test2_text">Bla bla bla bla bla bla</p>
+        <p fourth="drucker"class="test3_text">Blo blo blo blo blo blo</p>
         <div class="contain-canvas">
             <canvas id="acuity"></canvas>
         </div>
