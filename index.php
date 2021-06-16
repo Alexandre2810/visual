@@ -10,6 +10,14 @@ for ($i = 1; $i < 5; $i++) {
 }
 ?>
 
+<?php
+require('data.php');
+for ($i = 1; $i < 5; $i++) {
+    $listeGamers[] = getTask(1, $i); //remplis le tableau de score des gamers
+    $listeNonGamers[] = getTask(2, $i); //remplis le tableau de score des non-gamers
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -33,7 +41,7 @@ for ($i = 1; $i < 5; $i++) {
         <h1 class="intro">Les jeux videos ameliorent-ils la vue ?</h1>
         <h1 class="title1">L'acuite visuelle</h1>
         <h1 class="title2">La concentration</h1>
-        <h1 class="title3">Drucker</h1>
+        <h1 class="title3">Part 3</h1>
         <picture>
             <img src="img/sound_on" alt="icone son" id="sound">
         </picture>
@@ -45,6 +53,9 @@ for ($i = 1; $i < 5; $i++) {
         </section>
         <div class="contain-canvas">
             <canvas id="acuity"></canvas>
+        </div>
+        <div class="contain-canvas2">
+            <canvas id="concentration"></canvas>
         </div>
 
         <div class="containertext">

@@ -12,6 +12,9 @@ const test1 = document.querySelector('.containertext')
 const test2 = document.querySelector('.containertestv2')
 const test3 = document.querySelector('.containertestv3')
 
+const contain_canva = document.querySelector('.contain-canvas')
+const contain_canva2 = document.querySelector('.contain-canvas2')
+
 const rightArrow = document.querySelector('#right_arrow')
 const leftArrow = document.querySelector('#left_arrow')
 
@@ -164,6 +167,8 @@ function removePart() {
     title1.classList.remove('show_title1')
     title2.classList.remove('show_title2')
     title3.classList.remove('show_title3')
+    contain_canva.classList.remove('show_contain-canvas')
+    contain_canva2.classList.remove('show_contain-canvas2')
 }
 
 function affPart0 () {
@@ -178,6 +183,8 @@ function affPart0 () {
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
     test3.classList.remove('show_containerv3')
+    contain_canva.classList.remove('show_contain-canvas')
+    contain_canva2.classList.remove('show_contain-canvas2')
 }
 
 
@@ -194,6 +201,8 @@ function affPart1 () {
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
     test3.classList.remove('show_containerv3')
+    contain_canva.classList.add('show_contain-canvas')
+    contain_canva2.classList.remove('show_contain-canvas2')
 }
 
 function affTest1 () {
@@ -216,6 +225,8 @@ function affPart2 () {
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
     test3.classList.remove('show_containerv3')
+    contain_canva.classList.remove('show_contain-canvas')
+    contain_canva2.classList.add('show_contain-canvas2')
 }
 
 function affTest2 () {
@@ -238,6 +249,8 @@ function affPart3 () {
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
     test3.classList.remove('show_containerv3')
+    contain_canva.classList.remove('show_contain-canvas')
+    contain_canva2.classList.remove('show_contain-canvas2')
 
 }
 

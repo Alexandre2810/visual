@@ -46,6 +46,7 @@ footer {
 }
 
 .contain-canvas {
+    display: none;
     position: absolute;
     top: calc(30%);
     bottom: 0;
@@ -53,6 +54,24 @@ footer {
     height: 40vh;
     width: 40vw;
 }
+
+.show_contain-canvas {
+    display: block;
+}
+
+.contain-canvas2 {
+    position: absolute;
+    top: calc(30%);
+    bottom: 0;
+    left: 50%;
+    height: 40vh;
+    width: 40vw;
+}
+
+.show_contain-canvas2 {
+    display: block;
+}
+
 
 #sound {
     position: absolute;
@@ -123,6 +142,13 @@ h1 {
 
 
 #acuity {
+    position: absolute;
+    opacity:1;
+    margin: auto;
+    border: white dotted 1px;
+}
+
+#concentration{
     position: absolute;
     opacity:1;
     margin: auto;
