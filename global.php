@@ -6,6 +6,8 @@
     <!-- Css reset -->
 	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <!-- Css -->
+	<link rel="stylesheet" href="css/test1.css">
+	<link rel="stylesheet" href="css/test2.css">
 	<link rel="stylesheet" href="css/global.css">
 	<link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -23,22 +25,56 @@
         <picture>
             <img src="img/sound_on" alt="icone son" id="sound">
         </picture>
-        
-        <p first="BOOBOBO" class="test0_text">BOOBOBO</p>
-        <p second="michel"class="acuity_text">Blu blu blu blu blu blu</p>
-        <p third="michmich"class="test2_text">Bla bla bla bla bla bla</p>
-        <p fourth="drucker"class="test3_text">Blo blo blo blo blo blo</p>
+        <section class= text>
+            <p class="test0_text">BOOBOBO</p>
+            <p class="acuity_text">Ici, des joueurs de jeux videos ont ete compares a des non-joueurs au cours de plusieurs experiences. Les participants ont ete testes binoculairement avant les experiences et le groupe des joueurs a montre des resultats initiaux superieurs au non-joueurs. Nous avons mene une etude d'entrainement intensif ( 50h sur 9 semaines ) sur le groupe des non-joueurs. Les resultats des differentes experiences nous montrent que les jeux videos ameliorent la vision sur plusieurs points, les participants se sont considerablement ameliores.</p>
+            <p class="test2_text">Bla bla bla bla bla bla</p>
+            <p class="test3_text">Blo blo blo blo blo blo</p>
+        </section>
         <div class="contain-canvas">
             <canvas id="acuity"></canvas>
         </div>
-    <picture>
-        <img src="img/arrow_left" alt="flèche vers la gauche" id="left_arrow">
-    </picture>
-    <picture>
-        <img src="img/arrow_right" alt="flèche vers la droite" id="right_arrow">
-    </picture>
-        
-    </div>
+
+        <div class="containertext">
+            <p id="acuity_text1">A B C D E F</p>
+            <p id="acuity_text2">G H I J K L</p>
+            <p id="acuity_text3">M N O P Q R</p>
+            <p id="acuity_text4">S T U V W</p>
+            <p id="acuity_text5">X Y Z</p>
+        </div>
+
+
+        <div class="containertestv2">
+            <p id="acuity_test1v2">ROUGE</p>
+            <p id="acuity_test2v2">VERT</p>
+            <p id="acuity_test3v2">ORANGE</p>
+            <p id="acuity_test4v2">GRIS</p>
+            <p id="acuity_test5v2">ROSE</p>
+            <p id="acuity_test6v2">VIOLET</p>
+            <p id="acuity_test7v2">NOIR</p>
+            <p id="acuity_test8v2">JAUNE</p>
+            <p id="acuity_test9v2">MARRON</p>
+            <p id="acuity_test10v2">ORANGE</p>
+            <p id="acuity_test11v2">JAUNE</p>
+            <p id="acuity_test12v2">ROSE</p>
+            <p id="acuity_test13v2">ROUGE</p>
+            <p id="acuity_test14v2">GRIS</p>
+            <p id="acuity_test16v2">VERT</p>
+            <p id="acuity_test17v2">MARRON</p>
+            <p id="acuity_test18v2">NOIR</p>
+            <p id="acuity_test19v2">VIOLET</p>
+            <p id="acuity_test20v2">JAUNE</p>
+            <p id="acuity_test15v2">NOIR</p>
+        </div>
+
+        <picture>
+            <img src="img/arrow_left" alt="flèche vers la gauche" id="left_arrow">
+        </picture>
+        <picture>
+            <img src="img/arrow_right" alt="flèche vers la droite" id="right_arrow">
+        </picture>
+            
+        </div>
    
 </body>
 <footer>

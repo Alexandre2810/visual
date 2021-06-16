@@ -78,13 +78,21 @@ footer {
     cursor: pointer;
 }
 
-.test0_text, .acuity_text, .test2_text, .test3_text {
-    display: none;
+.text {
+    display: block;
     position: absolute;
     margin: auto;
-    top: 50%;
+    top: 25%;
     left: 150px;
+    line-height: 1.6em;
+    word-spacing: 0.5rem;
     font-size: 1.5em;
+    width: 600px;
+    height: auto;
+}
+
+.acuity_text, .test2_text, .test3_text {
+    display: none;
 }
 
 h1 {
@@ -121,91 +129,3 @@ h1 {
     border: white dotted 1px;
 }
 
-.test0_text {
-    visibility: hidden;
-}
-
-.test0_text::before {
-    content: attr(first);
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    color: white;
-    border-right: hidden;
-    overflow: hidden;
-    animation: animate 3s linear forwards
-}
-
-.acuity_text {
-    visibility: hidden;
-}
-
-.acuity_text::before {
-    content: "blublublub";
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    color: white;
-    border-right: hidden;
-    overflow: hidden;
-    animation: animate 3s linear forwards
-}
-
-.test2_text {
-    visibility: hidden;
-}
-
-.test2_text::before {
-    content: attr(third);
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    color: white;
-    border-right: hidden;
-    overflow: hidden;
-    animation: animate 3s linear forwards
-}
-
-.test3_text {
-    visibility: hidden;
-}
-
-.test3_text::before {
-    content: attr(fourth);
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    color: white;
-    border-right: hidden;
-    overflow: hidden;
-    animation: animate 3s linear forwards
-}
-
-
-
-
-@keyframes animate {
-    0%
-    {
-        width: 0;
-        border-right: hidden;
-    }
-    100%
-    {
-        width: 100%;
-        border-right: hidden;
-    }
-    
-}
