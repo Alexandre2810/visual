@@ -1,6 +1,101 @@
+#containertestv3 {
+    position: absolute;
+    margin: auto;
+    position: absolute;
+    height: calc(100% - 70px);
+    width: 100%;
+}
 
+.testv3 {
+    font-size: 5em;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    max-width: 100px;
+    top: 50%;
+    margin: auto;
+}
 
+.rotateleft {
+    transform: rotate(-180deg);
+}
 
+.rotatetop {
+    transform: rotate(-90deg);
+}
 
+.rotatebot {
+    transform: rotate(90deg);
+}
 
+#textacuitytest {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    font-family: "craie";
+}
 
+.contain-canvas {
+    position: absolute;
+    top: calc(30%);
+    bottom: 0;
+    left: 50%;
+    height: 40vh;
+    width: 40vw;
+}
+
+#sound {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 100px;
+    height: 70px;
+    top: 5px;
+    left: 5px;
+}
+
+#nav_container {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 600px;
+    left: 50%;
+    top: 25px;
+}
+
+#button_right_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 75%;
+    top: 47%;
+    cursor: pointer;
+}
+
+#button_left_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 25%;
+    top: 47%;
+    cursor: pointer;
+}
+
+#button_top_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 48%;
+    top: 25%;
+    cursor: pointer;
+}
+
+#button_bot_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 48%;
+    top: 75%;
+    cursor: pointer;
+}
