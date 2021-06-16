@@ -309,4 +309,5 @@ for ($i = 1; $i < 5; $i++) {
 
 
     <script src="js/index.js"></script>
+    <script src="js/test3.js"></script>
 </html>
