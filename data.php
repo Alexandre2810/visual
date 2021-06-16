@@ -1,20 +1,63 @@
 <?php
-header('Content-Type: application/json');
 
-$conn = mysqli_connect("127.0.0.1", "root", "", "projetfinal");
+define('HOST', 'localhost');
+define('USER', 'id17055599_root');//id17055599_root
+define('PASSWORD', 'Batman_0102034');//Batman_0102034
+define('DATABASE', 'id17055599_projetfinal');//id17055599_projetfinal
 
-$sqlQuery = "SELECT joueurs,score FROM data___feuille_3";
 
-$result = mysqli_query($conn, $sqlQuery);
 
-$data = [];
 
-while ($entry = mysqli_fetch_assoc($result)) {
-    $data[] = $entry;
+/**
+ * Obtenir le score au test selon le profil et le type d'expérience
+ * 
+ * $profil int : 1 OR 2 (gamer/non-gamer)
+ * $nbXp int : [1,4]
+ */
+function getScore($profile, $nbXp){
+    $conn = mysqli_connect(HOST, USER, PASSWORD, DATABASE);//connexion à la base de donnée
+    if(!$conn){
+        return false;
+    }
+    if($nbXp != 0){
+        $query = "SELECT scoretest FROM data___feuille_3 WHERE profil_id = $profile AND libelle = 'exp$nbXp';";
+    }else{
+        $query = "SELECT scoretest FROM data___feuille_3 WHERE profil_id = $profile AND libelle = 'avantest';";
+    }
+
+    $result = mysqli_query($conn, $query);
+    if(!$result){
+        return false;
+    }
+    $data = $result->fetch_row();
+
+    $finalResult = floatval($data[0]);// récupère le premier et seul résultat de la requête
+
+    mysqli_close($conn);
+    
+    return $finalResult;
 }
 
-mysqli_close($conn);
+function getTask($profile, $nbTest){
+    $conn = mysqli_connect(HOST, USER, PASSWORD, DATABASE);//connexion à la base de donnée
+    if(!$conn){
+        return false;
+    }
+    if($nbTest != 0){
+        $query = "SELECT task FROM data___feuille_4 WHERE profil_id = $profile AND libelle = 'test$nbTest';";
+    }
 
+    $result = mysqli_query($conn, $query);
+    if(!$result){
+        return false;
+    }
+    $data = $result->fetch_row();
 
-echo json_encode($data);
-?>
+    $finalResult = floatval($data[0]);// récupère le premier et seul résultat de la requête
+
+    mysqli_close($conn);
+    
+    return $finalResult;
+    var_dump($result);
+}
+
