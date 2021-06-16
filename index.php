@@ -6,33 +6,17 @@
     <!-- Css reset -->
 	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <!-- Css -->
-	<link rel="stylesheet" href="css/global.css">
 	<link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
 
 
 </head>
-
 <body>
-    <header>
-        <picture id="sound">
-            <img src="img/sound_on" alt="icone son" id="son_on">
-        </picture>
-    </header>
     <div id="container">
-        <p id="acuity_text">Blu blu blu blu blu blu</p>
-        <div class="contain-canvas">
-            <canvas id="acuity"></canvas>
-        </div>
-    <picture>
-        <img src="img/arrow_left" alt="flèche vers la gauche" id="left_arrow">
-    </picture>
-    <picture>
-        <img src="img/arrow_right" alt="flèche vers la droite" id="right_arrow">
-    </picture>
-        
+        <canvas id="acuity"></canvas>
     </div>
+
     <script>
         $(document).ready(function () {
             showGraph();
@@ -88,14 +72,9 @@
                         type: 'bar',
                         data: chartdata,
                         options: {
-                            animation:{
-                                duration:4000,
-                                easing:'easeInBounce',
-                            },
                             legend:{
                                 labels:{
-                                    fontColor:'rgb(255, 255, 255)',
-                                    fontSize:30,
+                                    fontColor:'rgb(255, 255, 255)'
                                 }
                             },
                             scales: {
@@ -122,14 +101,19 @@
             }
         }
         </script>
-   
+
 </body>
 <footer>
+    <div id="sound">
+        <div id="icon_sound"></div>
+        <span id="toggle">Yes</span>
+    </div>
     <nav id="nav_container">
         <div id="part0">0</div>
         <div id="part1">1</div>
         <div id="part2">2</div>
         <div id="part3">3</div>
+        <div id="part4">4</div>
     </nav>
 </footer>
 </html>
