@@ -15,61 +15,41 @@
 </head>
 
 <body>
-    <header>
-        <picture id="sound">
-            <img src="img/sound_on" alt="icone son" id="son_on">
-        </picture>
-    </header>
     <div id="container">
-        <div id="all-data-container">
-            <div id="data-container">
-                <p class="acuity_text">0 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vel debitis aperiam illum nam. Consequuntur officiis, nam, reprehenderit possimus enim nihil, sunt et vero laborum magni incidunt deleniti eveniet corrupti.</p>
-                <div class="contain-canvas">
-                    <canvas class="acuity"></canvas>
-                </div>
-            </div>
-            <div id="data-container">
-                <p class="acuity_text">1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vel debitis aperiam illum nam. Consequuntur officiis, nam, reprehenderit possimus enim nihil, sunt et vero laborum magni incidunt deleniti eveniet corrupti.</p>
-                <div class="contain-canvas">
-                    <canvas class="acuity"></canvas>
-                </div>
-            </div>
-            <div id="data-container">
-                <p class="acuity_text">2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vel debitis aperiam illum nam. Consequuntur officiis, nam, reprehenderit possimus enim nihil, sunt et vero laborum magni incidunt deleniti eveniet corrupti.</p>
-                <div class="contain-canvas">
-                    <canvas class="acuity"></canvas>
-                </div>
-            </div>
-            <div id="data-container">
-                <p class="acuity_text">3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vel debitis aperiam illum nam. Consequuntur officiis, nam, reprehenderit possimus enim nihil, sunt et vero laborum magni incidunt deleniti eveniet corrupti.</p>
-                <div class="contain-canvas">
-                    <canvas class="acuity"></canvas>
-                </div>
-            </div>
-            <div id="data-container">
-                <p class="acuity_text">4 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vel debitis aperiam illum nam. Consequuntur officiis, nam, reprehenderit possimus enim nihil, sunt et vero laborum magni incidunt deleniti eveniet corrupti.</p>
-                <div class="contain-canvas">
-                    <canvas class="acuity"></canvas>
-                </div>
-            </div>
+        <h1 class="intro">Les jeux videos ameliorent-ils la vue ?</h1>
+        <h1 class="title1">L'acuite visuelle</h1>
+        <h1 class="title2">Michel</h1>
+        <h1 class="title3">Drucker</h1>
+        <picture>
+            <img src="img/sound_on" alt="icone son" id="sound">
+        </picture>
+        
+        <p first="BOOBOBO" class="test0_text">BOOBOBO</p>
+        <p second="michel"class="acuity_text">Blu blu blu blu blu blu</p>
+        <p third="michmich"class="test2_text">Bla bla bla bla bla bla</p>
+        <p fourth="drucker"class="test3_text">Blo blo blo blo blo blo</p>
+        <div class="contain-canvas">
+            <canvas id="acuity"></canvas>
         </div>
-        <picture>
-            <img src="img/arrow_left" alt="flèche vers la gauche" id="left_arrow">
-        </picture>
-        <picture>
-            <img src="img/arrow_right" alt="flèche vers la droite" id="right_arrow">
-        </picture>
+    <picture>
+        <img src="img/arrow_left" alt="flèche vers la gauche" id="left_arrow">
+    </picture>
+    <picture>
+        <img src="img/arrow_right" alt="flèche vers la droite" id="right_arrow">
+    </picture>
+        
     </div>
+   
+</body>
 <footer>
     <nav id="nav_container">
-        <div id="part0">0</div>
-        <div id="part1">1</div>
-        <div id="part2">2</div>
-        <div id="part3">3</div>
-        <div id="part4">4</div>
+        <img src="img/post-it-0" alt="post it 0"  id="part0">
+        <img src="img/post-it-1" alt="post it 1" id="part1">
+        <img src="img/post-it-2" alt="post it 2" id="part2">
+        <img src="img/post-it-3" alt="post it 3" id="part3">
     </nav>
 </footer>
-<script>
+    <script>
         $(document).ready(function () {
             showGraph();
         });
@@ -92,26 +72,41 @@
                     }
                     console.log(score)
                     var chartdata = {
-                        labels: ['Gamers','Non-Gamers','Exp1','Exp2','Exp3', 'Exp4'],
+                        labels: ['Exp1','Exp2','Exp3', 'Exp4'],
                         datasets: [
                             {
-                                label: 'Visual Acuity Score',
+                                label: 'Gamer',
                                 data: score,
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(255, 99, 132, 0.2)',
                                 ],
                                 borderColor: [
                                     'rgba(255, 99, 132, 1)',
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(255, 99, 132, 1)',
+                                ],
+                                hoverBackgroundColor: '#CCCCCC',
+                                hoverBorderColor: '#666666',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Non-Gamer',
+                                data: score,
+                                backgroundColor: [
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                ],
+                                borderColor: [
                                     'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(54, 162, 235, 1)',
                                 ],
                                 hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
@@ -160,62 +155,6 @@
             }
         
         }
-
-        let position = 0
-        if (position == 0) {
-                document.querySelector('#left_arrow').style.display = "none"
-        }
-
-        document.querySelector('#right_arrow').addEventListener('click', () => {
-            position -= 100
-            document.querySelector('#all-data-container').style.transform = `translateX(${position}%)`
-            if (position == 0) {
-                document.querySelector('#left_arrow').style.display = "none"
-            } else {
-                document.querySelector('#left_arrow').style.display = "block"
-            }
-        })
-
-        document.querySelector('#left_arrow').addEventListener('click', () => {
-            position += 100
-            document.querySelector('#all-data-container').style.transform = `translateX(${position}%)`
-            if (position == 0) {
-                document.querySelector('#left_arrow').style.display = "none"
-            } else {
-                document.querySelector('#left_arrow').style.display = "block"
-            }
-        })
-
-        document.querySelectorAll('#nav_container > *').forEach( element => {
-            element.addEventListener('click', () => {
-                switch (element.getAttribute('id')) {
-                    case ('part0'):
-                        position = 0
-                        break;
-                    case ('part1'):
-                        position = -100
-                        break;
-                    case ('part2'):
-                        position = -200
-                        break;
-                    case ('part3'):
-                        position = -300
-                        break;
-                    case ('part4'):
-                        position = -400
-                        break;
-                    default:
-                        break;
-                }
-                document.querySelector('#all-data-container').style.transform = `translateX(${position}%)`
-                if (position == 0) {
-                    document.querySelector('#left_arrow').style.display = "none"
-                } else {
-                    document.querySelector('#left_arrow').style.display = "block"
-                }
-            })
-        })
-        
     </script>
-</body>
+    <script src="js/index.js"></script>
 </html>

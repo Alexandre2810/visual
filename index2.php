@@ -38,6 +38,8 @@
             showGraph();
         });
 
+        
+
         function showGraph()
         {
             {
@@ -54,26 +56,41 @@
                     }
                     console.log(score)
                     var chartdata = {
-                        labels: ['Gamers','Non-Gamers','Exp1','Exp2','Exp3', 'Exp4'],
+                        labels: ['Exp1','Exp2','Exp3', 'Exp4'],
                         datasets: [
                             {
-                                label: 'Visual Acuity Score',
+                                label: 'Gamer',
                                 data: score,
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(255, 99, 132, 0.2)',
                                 ],
                                 borderColor: [
                                     'rgba(255, 99, 132, 1)',
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(255, 99, 132, 1)',
+                                ],
+                                hoverBackgroundColor: '#CCCCCC',
+                                hoverBorderColor: '#666666',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Non-Gamer',
+                                data: score,
+                                backgroundColor: [
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                ],
+                                borderColor: [
                                     'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(54, 162, 235, 1)',
                                 ],
                                 hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
@@ -120,6 +137,7 @@
                     });
                 });
             }
+        
         }
         </script>
    
