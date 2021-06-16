@@ -27,7 +27,7 @@
         </picture>
         <section class= text>
             <p class="test0_text">Le niveau d'acuite visuel mondial est en baisse. Il s'explique en partie par le nombre croissant des personnes habitants en ville mais aussi par l'omnipresence des ecrans dans la vie quotidienne. Quels moyens avons nous de disponible pour pouvoir reduire la croissance de cette evolution. Il sera sans doute difficile a croire mais les jeux videos peuvent nous aider a ameliorer la vue.</p>
-            <p class="acuity_text">Ici, des joueurs de jeux videos ont ete compares a des non-joueurs au cours de plusieurs experiences. Les participants ont ete testes binoculairement avant les experiences et le groupe des joueurs a montre des resultats initiaux superieurs au non-joueurs. Nous avons mene une etude d'entrainement intensif ( 50h sur 9 semaines ) sur le groupe des non-joueurs. Les resultats des differentes experiences nous montrent que les jeux videos ameliorent la vision sur plusieurs points, les participants se sont considerablement ameliores.</p>
+            <p class="acuity_text">On mene une experience qui compare des gamers et des non-gamers. Le premier resultat est issu d’un test oculaire classique. Les gamers vont jouer a un shooter (50h sur 9 semaines) et les autres regardent la television. A l’issue les deux categories subissent 4 tests differents pour jauger leurs sensibilites aux contrastes. On remarque que les gamers ameliorent leur score.</p>
             <p class="test2_text">Bla bla bla bla bla bla</p>
             <p class="test3_text">Blo blo blo blo blo blo</p>
         </section>
