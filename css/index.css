@@ -3,8 +3,6 @@
     src: url("../fonts/BaconKingdom.ttf");
 }
 
-
-
 body {
     background-image: url("../img/blackboard.jpg");
     background-size: cover;
@@ -15,53 +13,299 @@ footer {
     width: 100%;
     height: 70px;
     bottom: 0;
-    background-image: url('../img/Bois.jpg');
+    background-image: url('../img/Bois.png');
     font-size: 1.5em;
     font-family: "Craie";
     color: white;
 }
 
+#left_arrow {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 100px;
+    height: 70px;
+}
+
+#right_arrow {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 100px;
+    height: 70px;
+}
+
 #container {
     position: absolute;
     margin: auto;
-    height: 40vh;
-    width: 40vw;
-    /*position: absolute;
+    position: absolute;
     height: calc(100% - 70px);
     width: 100%;
-    background-color: white;
-    overflow: hidden;
-*/
 }
 
-#acuity_text {
+#containertext {
     position: absolute;
     margin: auto;
-    top: 4vh;
-    left: 150px;
+    position: absolute;
+    height: calc(100% - 70px);
+    width: 100%;
 }
 
-#acuity {
+#acuity_test1v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(89, 0, 255);
     position: absolute;
-    opacity:1;
-    /* width: 500px;
-    height: 500px; */
+    top: 15%;
+    max-width: 100px;
+    left: 15%;
+}
+
+#acuity_test2v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(253, 0, 0);
+    position: absolute;
+    top: 15%;
+    max-width: 100px;
+    left: 30%;
+}
+
+#acuity_test3v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(255, 251, 0);
+    position: absolute;
+    top: 15%;
+    max-width: 100px;
+    left: 45%;
+}
+
+#acuity_test4v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(30, 255, 0);
+    position: absolute;
+    top: 15%;
+    max-width: 100px;
+    left: 60%;
+}
+
+#acuity_test5v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(255, 136, 0);
+    position: absolute;
+    top: 15%;
+    max-width: 100px;
+    left: 75%;
+}
+
+#acuity_test6v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(0, 255, 13);
+    position: absolute;
+    top: 30%;
+    max-width: 100px;
+    left: 15%;
+}
+
+#acuity_test7v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(208, 255, 0);
+    position: absolute;
+    top: 30%;
+    max-width: 100px;
+    left: 30%;
+}
+
+#acuity_test8v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: white;
+    position: absolute;
+    top: 30%;
+    max-width: 100px;
+    left: 45%;
+}
+
+#acuity_test9v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(255, 115, 0);
+    position: absolute;
+    top: 30%;
+    max-width: 100px;
+    left: 60%;
+}
+
+#acuity_test10v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(132, 0, 255);
+    position: absolute;
+    top: 30%;
+    max-width: 100px;
+    left: 75%;
+}
+
+#acuity_test11v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(255, 251, 0);
+    position: absolute;
+    top: 45%;
+    max-width: 100px;
+    left: 15%;
+}
+
+#acuity_test12v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(255, 0, 0);
+    position: absolute;
+    top: 45%;
+    max-width: 100px;
+    left: 30%;
+}
+
+#acuity_test13v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(55, 0, 255);
+    position: absolute;
+    top: 45%;
+    max-width: 100px;
+    left: 45%;
+}
+
+#acuity_test14v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(255, 0, 0);
+    position: absolute;
+    top: 45%;
+    max-width: 100px;
+    left: 60%;
+}
+
+#acuity_test15v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(0, 255, 242);
+    position: absolute;
+    top: 45%;
+    max-width: 100px;
+    left: 75%;
+}
+
+#acuity_test16v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 60%;
+    max-width: 100px;
+    left: 75%;
+}
+
+#acuity_test17v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(51, 255, 0);
+    position: absolute;
+    top: 60%;
+    max-width: 100px;
+    left: 15%;
+}
+
+#acuity_test18v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: white;
+    position: absolute;
+    top: 60%;
+    max-width: 100px;
+    left: 30%;
+}
+
+#acuity_test19v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(255, 0, 0);
+    position: absolute;
+    top: 60%;
+    max-width: 100px;
+    left: 45%;
+}
+
+#acuity_test20v2 {
+    font-size: 3em;
+    font-family: "Craie";
+    color: rgb(255, 196, 0);
+    position: absolute;
+    top: 60%;
+    max-width: 100px;
+    left: 60%;
+}
+
+#containertestv2 {
+    position: absolute;
     margin: auto;
-    top: 4vh;
-    left: 250px;
-    right: 0;
+    position: absolute;
+    height: calc(100% - 70px);
+    width: 100%;
+    align-content: center;
+}
+
+#containertestv3 {
+    position: absolute;
+    margin: auto;
+    position: absolute;
+    height: calc(100% - 70px);
+    width: 100%;
+}
+
+.testv3 {
+    font-size: 5em;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    max-width: 100px;
+    top: 50%;
+    margin: auto;
+}
+
+.rotateleft {
+    transform: rotate(-180deg);
+}
+
+.rotatetop {
+    transform: rotate(-90deg);
+}
+
+.rotatebot {
+    transform: rotate(90deg);
+}
+
+#textacuitytest {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    font-family: "craie";
+}
+
+.contain-canvas {
+    position: absolute;
+    top: calc(30%);
     bottom: 0;
-    border: white dotted 1px;
+    left: 50%;
+    height: 40vh;
+    width: 40vw;
 }
-
-
-
-/*canvas {
-    display: block;
-    width: 700px !important;
-    height: 500px !important;
-}
-*/
 
 #sound {
     display: flex;
@@ -69,20 +313,8 @@ footer {
     flex-direction: row;
     width: 100px;
     height: 70px;
-}
-
-
-#son_on {
-    position: absolute;
-    width: 100px;
-    height: 70px;
-}
-
-#toggle {
-    position: absolute;
-    top: 25px;
-    left: 110px;
-    color: white;
+    top: 5px;
+    left: 5px;
 }
 
 #nav_container {
@@ -92,4 +324,40 @@ footer {
     width: 600px;
     left: 50%;
     top: 25px;
+}
+
+#button_right_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 75%;
+    top: 47%;
+    cursor: pointer;
+}
+
+#button_left_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 25%;
+    top: 47%;
+    cursor: pointer;
+}
+
+#button_top_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 48%;
+    top: 25%;
+    cursor: pointer;
+}
+
+#button_bot_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 48%;
+    top: 75%;
+    cursor: pointer;
 }
