@@ -1,3 +1,19 @@
+<?php
+require('data.php');
+for($i = 0; $i <5; $i++){
+    $tableauGamers[] = getScore(1,$i);//remplis le tableau de score des gamers
+    $tableauNonGamers[] = getScore(2, $i);//remplis le tableau de score des non-gamers
+}
+?>
+
+<?php
+require('data.php');
+for ($i = 1; $i < 5; $i++) {
+    $listeGamers[] = getTask(1, $i); //remplis le tableau de score des gamers
+    $listeNonGamers[] = getTask(2, $i); //remplis le tableau de score des non-gamers
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -107,112 +123,190 @@
         <img src="img/post-it-3" alt="post it 3" id="part3">
     </nav>
 </footer>
-    <script>
+<script>
         $(document).ready(function () {
             showGraph();
         });
 
-        
 
         function showGraph()
         {
-            {
-                $.get("data.php",
-                function (data)
-                {
-                    console.log(data);
-                    var joueurs = [];
-                    var score = [];
-
-                    for (var i in data) {
-                        joueurs.push(data[i].joueurs);
-                        score.push(parseFloat(data[i].score.replace(',','.')));
+            
+            var chartdata = {
+                labels: ['VisualAcuityScore','Exp1','Exp2','Exp3', 'Exp4'],
+                datasets: [
+                    {
+                        label: 'Gamer',
+                        data: [<?php echo implode($tableauGamers, ' , '); ?>],//afficher en php toute les valeurs du tableau gamers php dans un tableau js
+                        backgroundColor: [
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(255, 206, 86, 0.2))',
+                            'rgba(255, 206, 86, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                    },
+                    {
+                        label: 'Non-Gamer',
+                        data: [<?php echo implode($tableauNonGamers,' , '); ?>],//afficher en php toute les valeurs du tableau non-gamers php dans un tableau js
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 99, 132, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
                     }
-                    console.log(score)
-                    var chartdata = {
-                        labels: ['Exp1','Exp2','Exp3', 'Exp4'],
-                        datasets: [
-                            {
-                                label: 'Gamer',
-                                data: score,
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(255, 99, 132, 0.2)',
-                                ],
-                                borderColor: [
-                                    'rgba(255, 99, 132, 1)',
-                                    'rgba(255, 99, 132, 1)',
-                                    'rgba(255, 99, 132, 1)',
-                                    'rgba(255, 99, 132, 1)',
-                                ],
-                                hoverBackgroundColor: '#CCCCCC',
-                                hoverBorderColor: '#666666',
-                                borderWidth: 1
-                            },
-                            {
-                                label: 'Non-Gamer',
-                                data: score,
-                                backgroundColor: [
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                ],
-                                borderColor: [
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(54, 162, 235, 1)',
-                                ],
-                                hoverBackgroundColor: '#CCCCCC',
-                                hoverBorderColor: '#666666',
-                                borderWidth: 1
-                            }
-                        ]
-                    };
-                    
-                    var graphTarget = $("#acuity");
+                ]
+            };
+            
+            var graphTarget = $("#acuity");
 
-                    var barGraph = new Chart(graphTarget, {
-                        type: 'bar',
-                        data: chartdata,
-                        options: {
-                            animation:{
-                                duration:4000,
-                                easing:'easeInBounce',
-                            },
-                            legend:{
-                                labels:{
-                                    fontColor:'rgb(255, 255, 255)',
-                                    fontSize:30,
-                                }
-                            },
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        fontSize:14,
-                                        fontColor: "white",
-                                        beginAtZero: true
-                                    }
-                                }],
-                                xAxes: [{
-                                    ticks: {
-                                    fontColor: "white",
-                                    fontSize: 14,
-                                    stepSize: 1,
-                                    beginAtZero: true
-                                    }
-                                }]
-                            }
+            var barGraph = new Chart(graphTarget, {
+                type: 'bar',
+                data: chartdata,
+                
+                options: {
+                    animation:{
+                        duration:4000,
+                        easing:'easeInBounce',
+                    },
+                    legend:{
+                        labels:{
+                            fontColor:'rgb(255, 255, 255)',
+                            fontSize:30,
                         }
-  
-                    });
-                });
-            }
-        
-        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                fontSize:14,
+                                fontColor: "white",
+                                beginAtZero: true
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                            fontColor: "white",
+                            fontSize: 14,
+                            stepSize: 1,
+                            beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+
+            });
+        };
+</script>
+
+<script>
+        $(document).ready(function() {
+            showGraph();
+        });
+
+
+        function showGraph() {
+
+            var chartdata = {
+                labels: ['Veryeasy', 'Easy', 'Medium', 'Hard'],
+                datasets: [{
+                        label: 'Gamer',
+                        fill: false,
+                        data: [<?php echo implode($listeGamers, ' , '); ?>], //afficher en php toute les valeurs du tableau gamers php dans un tableau js
+                        backgroundColor: [
+                            //  'rgba(255, 206, 86, 0.2)',
+                            // 'rgba(255, 206, 86, 0.2)',
+                            // 'rgba(255, 206, 86, 0.2)',
+                            // 'rgba(255, 206, 86, 0.2)',
+                            // 'rgba(255, 206, 86, 0.2))',
+                            // 'rgba(255, 206, 86, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            // 'rgba(54, 162, 235, 1)',
+                            // 'rgba(255, 206, 86, 1)',
+                            // 'rgba(75, 192, 192, 1)',
+                            // 'rgba(153, 102, 255, 1)',
+                            // 'rgba(255, 159, 64, 1)'
+                        ],
+                    },
+                    {
+                        label: 'Non-Gamer',
+                        fill: false,
+                        data: [<?php echo implode($listeNonGamers, ' , '); ?>], //afficher en php toute les valeurs du tableau non-gamers php dans un tableau js
+                        backgroundColor: [
+                            //  'rgba(255, 99, 132, 0.2)',
+                            // 'rgba(255, 99, 132, 0.2)',
+                            // 'rgba(255, 99, 132, 0.2)',
+                            // 'rgba(255, 99, 132, 0.2)',
+                            // 'rgba(255, 99, 132, 0.2)',
+                            // 'rgba(255, 99, 132, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgb(75, 192, 192)',
+                            // 'rgba(54, 162, 235, 1)',
+                            // 'rgba(255, 206, 86, 1)',
+                            // 'rgba(75, 192, 192, 1)',
+                            // 'rgba(153, 102, 255, 1)',
+                            // 'rgba(255, 159, 64, 1)'
+                        ],
+                    }
+                ]
+            };
+
+            var graphTarget = $("#acuity");
+
+            var barGraph = new Chart(graphTarget, {
+                type: 'line',
+                data: chartdata,
+                options: {
+                    responsive: true,
+                    legend: {
+                        labels: {
+                            fontColor: 'rgb(255, 255, 255)',
+                            fontSize: 30,
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                fontSize: 14,
+                                fontColor: "white",
+                                beginAtZero: true,
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                fontColor: "white",
+                                fontSize: 14,
+                                stepSize: 1,
+                            }
+                        }],
+                    }
+                }
+            });
+        };
     </script>
+
+
     <script src="js/index.js"></script>
 </html>
