@@ -1,44 +1,39 @@
 <?php
-header('Content-Type: application/json');
 
-$conn = mysqli_connect("localhost", "id17055599_root", "Batman_0102034", "id17055599_projetfinal");
+define('HOST', 'localhost');
+define('USER', 'root');//id17055599_root
+define('PASSWORD', '');//Batman_0102034
+define('DATABASE', 'projetfinal');//id17055599_projetfinal
 
-$sqlQuery = "SELECT * FROM data___feuille_1";
 
-$sqlQuery2 = "SELECT * FROM data___feuille_2";
 
-$sqlQuery3 = "SELECT * FROM data___feuille_3";
 
-$result = mysqli_query($conn, $sqlQuery);
+/**
+ * Obtenir le score au test selon le profil et le type d'expérience
+ * 
+ * $profil int : 1 OR 2 (gamer/non-gamer)
+ * $nbXp int : [1,4]
+ */
+function getScore($profile, $nbXp){
+    $conn = mysqli_connect(HOST, USER, PASSWORD, DATABASE);//connexion à la base de donnée
+    if(!$conn){
+        return false;
+    }
 
-$result2 = mysqli_query($conn,$sqlQuery2);
+    $query = "SELECT scoretest FROM data___feuille_3 WHERE profil_id = $profile AND libelle = 'exp$nbXp'";
 
-$result3 = mysqli_query($conn,$sqlQuery3);
+    $result = mysqli_query($conn, $query);
+    if(!$result){
+        return false;
+    }
+    $data = $result->fetch_row();
 
-$data = [];
+    $finalResult = floatval($data[0]);// récupère le premier et seul résultat de la requête
 
-$data2 = [];
-
-$data3 = [];
-
-while ($entry = mysqli_fetch_assoc($result)) {
-    $data[] = $entry;
+    mysqli_close($conn);
+    
+    return $finalResult;
 }
 
-while ($entry2 = mysqli_fetch_assoc($result2)) {
-    $data2[] = $entry2;
-}
-
-while ($entry3 = mysqli_fetch_assoc($result3)) {
-    $data3[] = $entry3;
-}
-
-var_dump($data, $data2, $data3);
-
-mysqli_close($conn);
 
 
-echo json_encode($data);
-echo json_encode($data2);
-echo json_encode($data3);
-?>
