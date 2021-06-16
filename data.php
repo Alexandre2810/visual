@@ -1,9 +1,9 @@
 <?php
 
 define('HOST', 'localhost');
-define('USER', 'root');//id17055599_root
-define('PASSWORD', '');//Batman_0102034
-define('DATABASE', 'projetfinal');//id17055599_projetfinal
+define('USER', 'id17055599_root');//id17055599_root
+define('PASSWORD', 'Batman_0102034');//Batman_0102034
+define('DATABASE', 'id17055599_projetfinal');//id17055599_projetfinal
 
 
 
@@ -19,8 +19,11 @@ function getScore($profile, $nbXp){
     if(!$conn){
         return false;
     }
-
-    $query = "SELECT scoretest FROM data___feuille_3 WHERE profil_id = $profile AND libelle = 'exp$nbXp'";
+    if($nbXp != 0){
+        $query = "SELECT scoretest FROM data___feuille_3 WHERE profil_id = $profile AND libelle = 'exp$nbXp';";
+    }else{
+        $query = "SELECT scoretest FROM data___feuille_3 WHERE profil_id = $profile AND libelle = 'avantest';";
+    }
 
     $result = mysqli_query($conn, $query);
     if(!$result){
@@ -35,5 +38,26 @@ function getScore($profile, $nbXp){
     return $finalResult;
 }
 
+function getTask($profile, $nbTest){
+    $conn = mysqli_connect(HOST, USER, PASSWORD, DATABASE);//connexion à la base de donnée
+    if(!$conn){
+        return false;
+    }
+    if($nbTest != 0){
+        $query = "SELECT task FROM data___feuille_4 WHERE profil_id = $profile AND libelle = 'test$nbTest';";
+    }
 
+    $result = mysqli_query($conn, $query);
+    if(!$result){
+        return false;
+    }
+    $data = $result->fetch_row();
+
+    $finalResult = floatval($data[0]);// récupère le premier et seul résultat de la requête
+
+    mysqli_close($conn);
+    
+    return $finalResult;
+    var_dump($result);
+}
 

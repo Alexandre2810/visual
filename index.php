@@ -1,6 +1,6 @@
 <?php
 require('data.php');
-for($i = 1; $i <5; $i++){
+for($i = 0; $i <5; $i++){
     $tableauGamers[] = getScore(1,$i);//remplis le tableau de score des gamers
     $tableauNonGamers[] = getScore(2, $i);//remplis le tableau de score des non-gamers
 }
@@ -25,7 +25,7 @@ for($i = 1; $i <5; $i++){
 <body>
     <header>
         <picture id="sound">
-            <img src="img/sound_on" alt="icone son" id="son_on">
+            <img src="img/sound_on.png" alt="icone son" id="son_on">
         </picture>
     </header>
     <div id="container">
@@ -34,10 +34,10 @@ for($i = 1; $i <5; $i++){
             <canvas id="acuity"></canvas>
         </div>
     <picture>
-        <img src="img/arrow_left" alt="flèche vers la gauche" id="left_arrow">
+        <img src="img/arrow_left.png" alt="flèche vers la gauche" id="left_arrow">
     </picture>
     <picture>
-        <img src="img/arrow_right" alt="flèche vers la droite" id="right_arrow">
+        <img src="img/arrow_right.png" alt="flèche vers la droite" id="right_arrow">
     </picture>
         
     </div>
@@ -52,7 +52,7 @@ for($i = 1; $i <5; $i++){
         {
             
             var chartdata = {
-                labels: ['Exp1','Exp2','Exp3', 'Exp4'],
+                labels: ['VisualAcuityScore','Exp1','Exp2','Exp3', 'Exp4'],
                 datasets: [
                     {
                         label: 'Gamer',
@@ -102,6 +102,7 @@ for($i = 1; $i <5; $i++){
             var barGraph = new Chart(graphTarget, {
                 type: 'bar',
                 data: chartdata,
+                
                 options: {
                     animation:{
                         duration:4000,
