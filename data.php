@@ -29,6 +29,7 @@ function getScore($profile, $nbXp){
     if(!$result){
         return false;
     }
+
     $data = $result->fetch_row();
 
     $finalResult = floatval($data[0]);// récupère le premier et seul résultat de la requête
@@ -58,6 +59,6 @@ function getTask($profile, $nbTest){
     mysqli_close($conn);
     
     return $finalResult;
-    var_dump($result);
+   
 }
 
