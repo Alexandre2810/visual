@@ -48,54 +48,81 @@ soundIcon.addEventListener('click', () => {
     }
 })
 
+function transiSound () {
+    eraser.play()
+        eraser.addEventListener("ended", () => {
+            chalk.play()
+        })
+}
+
 function rightPage() {
     console.log(nbPage)
     if (nbPage == 0) {
+        transiSound()
         Part1()
+
+
     }
     else if (nbPage == 1) {
+        transiSound()
         removePart()
         affTest1()
+
         
     }
     else if (nbPage == 2) {
+        transiSound()
         Part2()
+
     }
 
     else if (nbPage == 3) {
         removePart()
+        transiSound()
         affTest2()
     }
 
     else if (nbPage == 4) {
+        transiSound()
         Part3()
+
+
     }
 }
 
 function leftPage() {
     console.log(nbPage)
     if (nbPage == 1) {
+        transiSound()
         Part0()
     }
+
     else if (nbPage == 2) {
+        transiSound()
         Part1()
     }
 
     else if (nbPage == 3) {
+        transiSound()
         removePart()
         affTest1()
     }
 
     else if (nbPage == 4) {
+        transiSound()
         Part2()
+
+
     }
 
     else if (nbPage == 5) {
+        transiSound()
         removePart()
         affTest2()
     }
 
     else if (nbPage == 6) {
+        transiSound()
         Part3()
     }
 }
@@ -143,11 +170,6 @@ function affPart0 () {
     title3.classList.remove('show_title3')
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
-    eraser.play()
-    eraser.addEventListener("ended", () => {
-        chalk.play()
-    })
-
 }
 
 
@@ -163,12 +185,6 @@ function affPart1 () {
     title3.classList.remove('show_title3')
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
-    eraser.play()
-    eraser.addEventListener("ended", () => {
-        chalk.play()
-    })
-
-    
 }
 
 function affTest1 () {
@@ -197,6 +213,7 @@ function affTest2 () {
     nbPage = 4
 }
 
+
 function affPart3 () {
     text0.classList.add('hide_test0_text')
     text1.classList.remove('show_acuity_text')
@@ -208,28 +225,6 @@ function affPart3 () {
     title3.classList.add('show_title3')
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
-}
 
-    eraser.play()
-    eraser.addEventListener("ended", () => {
-        chalk.play()
-    })
-    
-}
-
-function affPart3 () {
-    eraser.play()
-    eraser.addEventListener("ended", () => {
-        text0.classList.add('hide_test0_text')
-        text1.classList.remove('show_acuity_text')
-        text2.classList.remove('show_test2_text')
-        text3.classList.add('show_test3_text')
-        title0.classList.add('hide_intro')
-        title1.classList.remove('show_title1')
-        title2.classList.remove('show_title2')
-        title3.classList.add('show_title3')
-        chalk.play()
-    })
-    
 }
 
