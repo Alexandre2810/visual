@@ -8,8 +8,8 @@
     <!-- Css -->
 	<link rel="stylesheet" href="css/test1.css">
 	<link rel="stylesheet" href="css/test2.css">
+	<link rel="stylesheet" href="css/test3.css">
 	<link rel="stylesheet" href="css/global.css">
-	<link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
 
@@ -20,7 +20,7 @@
     <div id="container">
         <h1 class="intro">Les jeux videos ameliorent-ils la vue ?</h1>
         <h1 class="title1">L'acuite visuelle</h1>
-        <h1 class="title2">Michel</h1>
+        <h1 class="title2">La concentration</h1>
         <h1 class="title3">Drucker</h1>
         <picture>
             <img src="img/sound_on" alt="icone son" id="sound">
@@ -65,6 +65,28 @@
             <p id="acuity_test19v2">VIOLET</p>
             <p id="acuity_test20v2">JAUNE</p>
             <p id="acuity_test15v2">NOIR</p>
+        </div>
+
+        <div id="containertestv3">
+            <p class="testv3">C</p>
+            <p id="textacuitytest">Dans quelle direction voyez vous l'encoche du C ?</p>
+
+            <picture>
+                <img src="img/button_arrow_right" alt="flèche vers la droite" id="button_right_arrow">
+            </picture>
+
+            <picture>
+                <img src="img/button_arrow_left" alt="flèche vers la droite" id="button_left_arrow">
+            </picture>
+
+            <picture>
+                <img src="img/button_arrow_top" alt="flèche vers la droite" id="button_top_arrow">
+            </picture>
+
+            <picture>
+                <img src="img/button_arrow_bot" alt="flèche vers la droite" id="button_bot_arrow">
+            </picture>
+
         </div>
 
         <picture>

@@ -10,6 +10,7 @@ const button3 = document.querySelector('#part3')
 
 const test1 = document.querySelector('.containertext')
 const test2 = document.querySelector('.containertestv2')
+const test3 = document.querySelector('.containertestv3')
 
 const rightArrow = document.querySelector('#right_arrow')
 const leftArrow = document.querySelector('#left_arrow')
@@ -56,7 +57,7 @@ function transiSound () {
 }
 
 function rightPage() {
-    console.log(nbPage)
+
     if (nbPage == 0) {
         transiSound()
         Part1()
@@ -85,8 +86,12 @@ function rightPage() {
     else if (nbPage == 4) {
         transiSound()
         Part3()
+    }
 
-
+    else if (nbPage == 5) {
+        removePart()
+        transiSound()
+        affTest3()
     }
 }
 
@@ -111,8 +116,6 @@ function leftPage() {
     else if (nbPage == 4) {
         transiSound()
         Part2()
-
-
     }
 
     else if (nbPage == 5) {
@@ -170,6 +173,7 @@ function affPart0 () {
     title3.classList.remove('show_title3')
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
+    test3.classList.remove('show_containerv3')
 }
 
 
@@ -185,11 +189,13 @@ function affPart1 () {
     title3.classList.remove('show_title3')
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
+    test3.classList.remove('show_containerv3')
 }
 
 function affTest1 () {
     test1.classList.add('show_containertext')
     test2.classList.remove('show_containertestv2')
+    test3.classList.remove('show_containerv3')
     nbPage = 2
 }
 
@@ -205,11 +211,13 @@ function affPart2 () {
     title3.classList.remove('show_title3')
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
+    test3.classList.remove('show_containerv3')
 }
 
 function affTest2 () {
     test1.classList.remove('show_containertext')
     test2.classList.add('show_containertestv2')
+    test3.classList.remove('show_containerv3')
     nbPage = 4
 }
 
@@ -225,6 +233,14 @@ function affPart3 () {
     title3.classList.add('show_title3')
     test1.classList.remove('show_containertext')
     test2.classList.remove('show_containertestv2')
+    test3.classList.remove('show_containerv3')
 
+}
+
+function affTest3 () {
+    test1.classList.remove('show_containertext')
+    test2.classList.remove('show_containertestv2')
+    test3.classList.add('show_containerv3')
+    nbPage = 6
 }
 

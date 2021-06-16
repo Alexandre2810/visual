@@ -1,0 +1,88 @@
+#containertestv3 {
+    display: none;
+    margin: auto;
+    position: absolute;
+    height: calc(100% - 70px);
+    width: 100%;
+}
+
+.show_containerv3 {
+    display: block;
+}
+
+.testv3 {
+    font-size: 5em;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    max-width: 100px;
+    top: 50%;
+    margin: auto;
+}
+
+.rotateleft {
+    transform: rotate(-180deg);
+}
+
+.rotatetop {
+    transform: rotate(-90deg);
+}
+
+.rotatebot {
+    transform: rotate(90deg);
+}
+
+#textacuitytest {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    font-family: "craie";
+}
+
+
+#sound {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 100px;
+    height: 70px;
+    top: 5px;
+    left: 5px;
+}
+
+#button_right_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 75%;
+    top: 47%;
+    cursor: pointer;
+}
+
+#button_left_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 25%;
+    top: 47%;
+    cursor: pointer;
+}
+
+#button_top_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 48%;
+    top: 25%;
+    cursor: pointer;
+}
+
+#button_bot_arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 48%;
+    top: 75%;
+    cursor: pointer;
+}
