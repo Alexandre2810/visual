@@ -26,10 +26,10 @@
             <img src="img/sound_on" alt="icone son" id="sound">
         </picture>
         
-        <p first="BOOBOBO" class="test0_text">BOOBOBO</p>
-        <p second="michel"class="acuity_text">Blu blu blu blu blu blu</p>
-        <p third="michmich"class="test2_text">Bla bla bla bla bla bla</p>
-        <p fourth="drucker"class="test3_text">Blo blo blo blo blo blo</p>
+        <p class="test0_text">BOOBOBO</p>
+        <p class="acuity_text">Blu blu blu blu blu blu</p>
+        <p class="test2_text">Bla bla bla bla bla bla</p>
+        <p class="test3_text">Blo blo blo blo blo blo</p>
         <div class="contain-canvas">
             <canvas id="acuity"></canvas>
         </div>
