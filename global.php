@@ -25,11 +25,12 @@
         <picture>
             <img src="img/sound_on" alt="icone son" id="sound">
         </picture>
-        
-        <p class="test0_text">BOOBOBO</p>
-        <p class="acuity_text">Blu blu blu blu blu blu</p>
-        <p class="test2_text">Bla bla bla bla bla bla</p>
-        <p class="test3_text">Blo blo blo blo blo blo</p>
+        <section class= text>
+            <p class="test0_text">BOOBOBO</p>
+            <p class="acuity_text">Ici, des joueurs de jeux videos ont ete compares a des non-joueurs au cours de plusieurs experiences. Les participants ont ete testes binoculairement avant les experiences et le groupe des joueurs a montre des resultats initiaux superieurs au non-joueurs. Nous avons mene une etude d'entrainement intensif ( 50h sur 9 semaines ) sur le groupe des non-joueurs. Les resultats des differentes experiences nous montrent que les jeux videos ameliorent la vision sur plusieurs points, les participants se sont considerablement ameliores.</p>
+            <p class="test2_text">Bla bla bla bla bla bla</p>
+            <p class="test3_text">Blo blo blo blo blo blo</p>
+        </section>
         <div class="contain-canvas">
             <canvas id="acuity"></canvas>
         </div>
