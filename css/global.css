@@ -156,3 +156,9 @@ h1 {
     border: white dotted 1px;
 }
 
+.disclaimer {
+    position: absolute;
+    right: 0;
+    font-style: none;
+}
+
