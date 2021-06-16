@@ -31,14 +31,38 @@
         <div class="contain-canvas">
             <canvas id="acuity"></canvas>
         </div>
-    <picture>
-        <img src="img/arrow_left" alt="flèche vers la gauche" id="left_arrow">
-    </picture>
-    <picture>
-        <img src="img/arrow_right" alt="flèche vers la droite" id="right_arrow">
-    </picture>
-        
-    </div>
+
+        <div id="containertestv2">
+            <p id="acuity_test1v2">ROUGE</p>
+            <p id="acuity_test2v2">VERT</p>
+            <p id="acuity_test3v2">ORANGE</p>
+            <p id="acuity_test4v2">GRIS</p>
+            <p id="acuity_test5v2">ROSE</p>
+            <p id="acuity_test6v2">VIOLET</p>
+            <p id="acuity_test7v2">NOIR</p>
+            <p id="acuity_test8v2">JAUNE</p>
+            <p id="acuity_test9v2">MARRON</p>
+            <p id="acuity_test10v2">ORANGE</p>
+            <p id="acuity_test11v2">JAUNE</p>
+            <p id="acuity_test12v2">ROSE</p>
+            <p id="acuity_test13v2">ROUGE</p>
+            <p id="acuity_test14v2">GRIS</p>
+            <p id="acuity_test16v2">VERT</p>
+            <p id="acuity_test17v2">MARRON</p>
+            <p id="acuity_test18v2">NOIR</p>
+            <p id="acuity_test19v2">VIOLET</p>
+            <p id="acuity_test20v2">JAUNE</p>
+            <p id="acuity_test15v2">NOIR</p>
+        </div>
+
+        <picture>
+            <img src="img/arrow_left" alt="flèche vers la gauche" id="left_arrow">
+        </picture>
+        <picture>
+            <img src="img/arrow_right" alt="flèche vers la droite" id="right_arrow">
+        </picture>
+            
+        </div>
    
 </body>
 <footer>
