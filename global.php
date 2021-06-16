@@ -26,7 +26,7 @@
             <img src="img/sound_on" alt="icone son" id="sound">
         </picture>
         <section class= text>
-            <p class="test0_text">BOOBOBO</p>
+            <p class="test0_text">Le niveau d'acuite visuel mondial est en baisse. Il s'explique en partie par le nombre croissant des personnes habitants en ville mais aussi par l'omnipresence des ecrans dans la vie quotidienne. Quels moyens avons nous de disponible pour pouvoir reduire la croissance de cette evolution. Il sera sans doute difficile a croire mais les jeux videos peuvent nous aider a ameliorer la vue.</p>
             <p class="acuity_text">Ici, des joueurs de jeux videos ont ete compares a des non-joueurs au cours de plusieurs experiences. Les participants ont ete testes binoculairement avant les experiences et le groupe des joueurs a montre des resultats initiaux superieurs au non-joueurs. Nous avons mene une etude d'entrainement intensif ( 50h sur 9 semaines ) sur le groupe des non-joueurs. Les resultats des differentes experiences nous montrent que les jeux videos ameliorent la vision sur plusieurs points, les participants se sont considerablement ameliores.</p>
             <p class="test2_text">Bla bla bla bla bla bla</p>
             <p class="test3_text">Blo blo blo blo blo blo</p>
@@ -67,7 +67,7 @@
             <p id="acuity_test15v2">NOIR</p>
         </div>
 
-        <div id="containertestv3">
+        <div class="containertestv3">
             <p class="testv3">C</p>
             <p id="textacuitytest">Dans quelle direction voyez vous l'encoche du C ?</p>
 

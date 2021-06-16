@@ -57,7 +57,7 @@ function transiSound () {
 }
 
 function rightPage() {
-
+    console.log(nbPage)
     if (nbPage == 0) {
         transiSound()
         Part1()
@@ -86,11 +86,13 @@ function rightPage() {
     else if (nbPage == 4) {
         transiSound()
         Part3()
+
+
     }
 
     else if (nbPage == 5) {
-        removePart()
         transiSound()
+        removePart()
         affTest3()
     }
 }
@@ -116,6 +118,8 @@ function leftPage() {
     else if (nbPage == 4) {
         transiSound()
         Part2()
+
+
     }
 
     else if (nbPage == 5) {
