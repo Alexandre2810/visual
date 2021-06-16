@@ -8,6 +8,9 @@ const button1 = document.querySelector('#part1')
 const button2 = document.querySelector('#part2')
 const button3 = document.querySelector('#part3')
 
+const test1 = document.querySelector('.containertext')
+const test2 = document.querySelector('.containertestv2')
+
 const rightArrow = document.querySelector('#right_arrow')
 const leftArrow = document.querySelector('#left_arrow')
 
@@ -33,9 +36,20 @@ function rightPage() {
         Part1()
     }
     else if (nbPage == 1) {
-        Part2()
+        removePart()
+        affTest1()
+        
     }
     else if (nbPage == 2) {
+        Part2()
+    }
+
+    else if (nbPage == 3) {
+        removePart()
+        affTest2()
+    }
+
+    else if (nbPage == 4) {
         Part3()
     }
 }
@@ -48,8 +62,23 @@ function leftPage() {
     else if (nbPage == 2) {
         Part1()
     }
+
     else if (nbPage == 3) {
+        removePart()
+        affTest1()
+    }
+
+    else if (nbPage == 4) {
         Part2()
+    }
+
+    else if (nbPage == 5) {
+        removePart()
+        affTest2()
+    }
+
+    else if (nbPage == 6) {
+        Part3()
     }
 }
 
@@ -66,12 +95,23 @@ function Part1 () {
 
 function Part2 () {    
     affPart2()
-    nbPage = 2
+    nbPage = 3
 }
 
 function Part3 () {
     affPart3()
-    nbPage = 3
+    nbPage = 5
+}
+
+function removePart() {
+    text0.classList.add('hide_test0_text')
+    text1.classList.remove('show_acuity_text')
+    text2.classList.remove('show_test2_text')
+    text3.classList.remove('show_test3_text')
+    title0.classList.add('hide_intro')
+    title1.classList.remove('show_title1')
+    title2.classList.remove('show_title2')
+    title3.classList.remove('show_title3')
 }
 
 function affPart0 () {
@@ -83,6 +123,8 @@ function affPart0 () {
     title1.classList.remove('show_title1')
     title2.classList.remove('show_title2')
     title3.classList.remove('show_title3')
+    test1.classList.remove('show_containertext')
+    test2.classList.remove('show_containertestv2')
 }
 
 
@@ -95,7 +137,15 @@ function affPart1 () {
     title1.classList.add('show_title1')
     title2.classList.remove('show_title2')
     title3.classList.remove('show_title3')
+    test1.classList.remove('show_containertext')
+    test2.classList.remove('show_containertestv2')
     
+}
+
+function affTest1 () {
+    test1.classList.add('show_containertext')
+    test2.classList.remove('show_containertestv2')
+    nbPage = 2
 }
 
 function affPart2 () {
@@ -107,6 +157,14 @@ function affPart2 () {
     title1.classList.remove('show_title1')
     title2.classList.add('show_title2')
     title3.classList.remove('show_title3')
+    test1.classList.remove('show_containertext')
+    test2.classList.remove('show_containertestv2')
+}
+
+function affTest2 () {
+    test1.classList.remove('show_containertext')
+    test2.classList.add('show_containertestv2')
+    nbPage = 4
 }
 
 function affPart3 () {
@@ -118,5 +176,7 @@ function affPart3 () {
     title1.classList.remove('show_title1')
     title2.classList.remove('show_title2')
     title3.classList.add('show_title3')
+    test1.classList.remove('show_containertext')
+    test2.classList.remove('show_containertestv2')
 }
 

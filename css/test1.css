@@ -1,0 +1,81 @@
+#acuity_text {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 150px;
+    font-size: 1.5em;
+    font-family: "Craie";
+    color: white;
+}
+
+#acuity_text1 {
+    position: relative;
+    margin: auto;
+    top: 15%;
+    font-size: 8em;
+    font-family: "Craie";
+    color: white;
+    text-align: center;
+}
+
+#acuity_text2 {
+    position: relative;
+    margin: auto;
+    top: 20%;
+    font-size: 5em;
+    font-family: "Craie";
+    color: white;
+    text-align: center;
+}
+
+#acuity_text3 {
+    position: relative;
+    margin: auto;
+    top: 25%;
+    font-size: 2.5em;
+    font-family: "Craie";
+    color: white;
+    text-align: center;
+}
+
+#acuity_text4 {
+    position: relative;
+    margin: auto;
+    top: 30%;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Craie";
+    color: white;
+}
+
+#acuity_text5 {
+    position: relative;
+    margin: auto;
+    top: 35%;
+    text-align: center;
+    font-size: 0.5em;
+    font-family: "Craie";
+    color: white;
+}
+
+
+
+#acuity {
+    position: absolute;
+    opacity: 1;
+    margin: auto;
+    border: white dotted 1px;
+}
+
+.containertext {
+    display: none;
+    position: absolute;
+    margin: auto;
+    position: absolute;
+    height: calc(100% - 70px);
+    width: 100%;
+}
+
+.show_containertext {
+    display: block;
+}

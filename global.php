@@ -6,6 +6,7 @@
     <!-- Css reset -->
 	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <!-- Css -->
+	<link rel="stylesheet" href="css/test1.css">
 	<link rel="stylesheet" href="css/test2.css">
 	<link rel="stylesheet" href="css/global.css">
 	<link rel="stylesheet" href="css/index.css">
@@ -33,7 +34,7 @@
             <canvas id="acuity"></canvas>
         </div>
 
-        <div id="containertext">
+        <div class="containertext">
             <p id="acuity_text1">A B C D E F</p>
             <p id="acuity_text2">G H I J K L</p>
             <p id="acuity_text3">M N O P Q R</p>
@@ -42,7 +43,7 @@
         </div>
 
 
-        <div id="containertestv2">
+        <div class="containertestv2">
             <p id="acuity_test1v2">ROUGE</p>
             <p id="acuity_test2v2">VERT</p>
             <p id="acuity_test3v2">ORANGE</p>

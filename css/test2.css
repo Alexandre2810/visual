@@ -1,11 +1,3 @@
-#containertext {
-    position: absolute;
-    margin: auto;
-    position: absolute;
-    height: calc(100% - 70px);
-    width: 100%;
-}
-
 #acuity_test1v2 {
     font-size: 3em;
     font-family: "Craie";
@@ -206,12 +198,16 @@
     left: 60%;
 }
 
-
-#containertestv2 {
+.containertestv2 {
+    display: none;
     position: absolute;
     margin: auto;
     position: absolute;
     height: calc(100% - 70px);
     width: 100%;
     align-content: center;
+}
+
+.show_containertestv2 {
+    display: block;
 }
