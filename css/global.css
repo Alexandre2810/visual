@@ -60,6 +60,7 @@ footer {
 }
 
 .contain-canvas2 {
+    display: none;
     position: absolute;
     top: calc(30%);
     bottom: 0;

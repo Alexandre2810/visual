@@ -129,6 +129,7 @@ for ($i = 1; $i < 5; $i++) {
         <img src="img/post-it-2.png" alt="post it 2" id="part2">
         <img src="img/post-it-3.png" alt="post it 3" id="part3">
     </nav>
+    <span class="disclaimer">Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Grande Ecole de l’école HETIC. Les contenus et données présentés n'ont pas fait l'objet d'une demande de droit d'utilisation. Ce site ne sera en aucun cas exploité à des fins commerciales</span>
     <script>
         $(document).ready(function () {
             showGraph();
@@ -279,7 +280,7 @@ for ($i = 1; $i < 5; $i++) {
                 ]
             };
 
-            var graphTarget = $("#acuity");
+            var graphTarget = $("#concentration");
 
             var barGraph = new Chart(graphTarget, {
                 type: 'line',
