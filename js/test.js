@@ -1,10 +1,11 @@
-var direction = 1
+var direction = Math.floor(Math.random() * 4)
 var point = 0
 
 const buttonRightArrow = document.querySelector('#button_right_arrow')
 const buttonLeftArrow = document.querySelector('#button_left_arrow')
 const buttonTopArrow = document.querySelector('#button_top_arrow')
 const buttonBotArrow = document.querySelector('#button_bot_arrow')
+const containTestV3 = document.querySelector('#containertestv3')
 
 const rotateDirection = document.querySelector('.testv3')
 
@@ -20,6 +21,7 @@ var maxClickSizeEm = 5;
 var initialSizeEm = 5;
 var minSizeEm = 1;
 
+
 function changeOpacityC() {
     rotateDirection.style.opacity = 1 - countClick * (1 / maxClickNullOpacity);
 }
@@ -29,50 +31,28 @@ function changeTailleC() {
 }
 
 function chooseRight() {
-    console.log(direction)
-    choose = 1
-    if (choose == direction) {
-        point++
-    }
-    direction = 0
+    direction = Math.floor(Math.random() * 4)
     reset()
     rotate()
 
 
 }
 function chooseLeft() {
-    console.log(direction)
-    choose = 3
-    if (choose == direction) {
-        point++
-    }
-    direction = 2
+    direction = Math.floor(Math.random() * 4)
     reset()
     rotate()
 
 
 }
 function chooseTop() {
-    console.log(direction)
-    choose = 0
-    if (choose == direction) {
-        point++
-
-    }
-    direction = 3
+    direction = Math.floor(Math.random() * 4)
     reset()
     rotate()
 
 
 }
 function chooseBot() {
-    console.log(direction)
-    choose = 2
-    if (choose == direction) {
-        point++
-
-    }
-    direction = 1
+    direction = Math.floor(Math.random() * 4)
     reset()
     rotate()
 

@@ -28,9 +28,9 @@
             <p class="testv3">C</p>
             <p id="textacuitytest">Dans quelle direction voyez vous l'encoche du C ?</p>
 
-
-            <img src="img/button_arrow_right" alt="flèche vers la droite" id="button_right_arrow">
-
+            <picture>
+                <img src="img/button_arrow_right" alt="flèche vers la droite" id="button_right_arrow">
+            </picture>
 
             <picture>
                 <img src="img/button_arrow_left" alt="flèche vers la droite" id="button_left_arrow">

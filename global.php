@@ -20,7 +20,7 @@
     <div id="container">
         <h1 class="intro">Les jeux videos ameliorent-ils la vue ?</h1>
         <h1 class="title1">L'acuite visuelle</h1>
-        <h1 class="title2">Michel</h1>
+        <h1 class="title2">La concentration</h1>
         <h1 class="title3">Drucker</h1>
         <picture>
             <img src="img/sound_on" alt="icone son" id="sound">
