@@ -16,6 +16,11 @@ const title1 = document.querySelector('.title1')
 const title2 = document.querySelector('.title2')
 const title3 = document.querySelector('.title3')
 
+const soundIcon = document.querySelector('#sound')
+const eraser = new Audio('sounds/eraser_sound.ogg')
+const chalk = new Audio('sounds/chalk_sound.ogg')
+let sound = true
+
 var nbPage = 0
 
 button0.addEventListener('click', Part0)
@@ -26,6 +31,19 @@ button3.addEventListener('click', Part3)
 rightArrow.addEventListener('click', rightPage)
 leftArrow.addEventListener('click', leftPage)
 
+function chalkPlay() {
+    chalk.play()
+}
+
+soundIcon.addEventListener('click', () => {
+    if (sound) {
+        sound = false
+        document.querySelector('#sound').src = './img/sound_off.png'
+    } else {
+        sound = true
+        document.querySelector('#sound').src = './img/sound_on.png'
+    }
+})
 
 function rightPage() {
     console.log(nbPage)
@@ -75,48 +93,66 @@ function Part3 () {
 }
 
 function affPart0 () {
-    text0.classList.remove('hide_test0_text')
-    text1.classList.remove('show_acuity_text')
-    text2.classList.remove('show_test2_text')
-    text3.classList.remove('show_test3_text')
-    title0.classList.remove('hide_intro')
-    title1.classList.remove('show_title1')
-    title2.classList.remove('show_title2')
-    title3.classList.remove('show_title3')
+    eraser.play()
+    eraser.addEventListener("ended", () => {
+        text0.classList.remove('hide_test0_text')
+        text1.classList.remove('show_acuity_text')
+        text2.classList.remove('show_test2_text')
+        text3.classList.remove('show_test3_text')
+        title0.classList.remove('hide_intro')
+        title1.classList.remove('show_title1')
+        title2.classList.remove('show_title2')
+        title3.classList.remove('show_title3')
+        chalk.play()
+    })
+    
 }
 
 
 function affPart1 () {
-    text0.classList.add('hide_test0_text')
-    text1.classList.add('show_acuity_text')
-    text2.classList.remove('show_test2_text')
-    text3.classList.remove('show_test3_text')  
-    title0.classList.add('hide_intro')
-    title1.classList.add('show_title1')
-    title2.classList.remove('show_title2')
-    title3.classList.remove('show_title3')
+    eraser.play()
+    eraser.addEventListener("ended", () => {
+        text0.classList.add('hide_test0_text')
+        text1.classList.add('show_acuity_text')
+        text2.classList.remove('show_test2_text')
+        text3.classList.remove('show_test3_text')  
+        title0.classList.add('hide_intro')
+        title1.classList.add('show_title1')
+        title2.classList.remove('show_title2')
+        title3.classList.remove('show_title3')
+        chalk.play()
+    })
     
 }
 
 function affPart2 () {
-    text0.classList.add('hide_test0_text')
-    text1.classList.remove('show_acuity_text')
-    text2.classList.add('show_test2_text')
-    text3.classList.remove('show_test3_text')
-    title0.classList.add('hide_intro')
-    title1.classList.remove('show_title1')
-    title2.classList.add('show_title2')
-    title3.classList.remove('show_title3')
+    eraser.play()
+    eraser.addEventListener("ended", () => {
+        text0.classList.add('hide_test0_text')
+        text1.classList.remove('show_acuity_text')
+        text2.classList.add('show_test2_text')
+        text3.classList.remove('show_test3_text')
+        title0.classList.add('hide_intro')
+        title1.classList.remove('show_title1')
+        title2.classList.add('show_title2')
+        title3.classList.remove('show_title3')
+        chalk.play()
+    })
+    
 }
 
 function affPart3 () {
-    text0.classList.add('hide_test0_text')
-    text1.classList.remove('show_acuity_text')
-    text2.classList.remove('show_test2_text')
-    text3.classList.add('show_test3_text')
-    title0.classList.add('hide_intro')
-    title1.classList.remove('show_title1')
-    title2.classList.remove('show_title2')
-    title3.classList.add('show_title3')
+    eraser.play()
+    eraser.addEventListener("ended", () => {
+        text0.classList.add('hide_test0_text')
+        text1.classList.remove('show_acuity_text')
+        text2.classList.remove('show_test2_text')
+        text3.classList.add('show_test3_text')
+        title0.classList.add('hide_intro')
+        title1.classList.remove('show_title1')
+        title2.classList.remove('show_title2')
+        title3.classList.add('show_title3')
+        chalk.play()
+    })
+    
 }
-
