@@ -5,9 +5,14 @@ for($i = 0; $i <5; $i++){
     $tableauNonGamers[] = getScore(2, $i);//remplis le tableau de score des non-gamers
 }
 for ($i = 1; $i < 5; $i++) {
-    $listeGamers[] = getTask(1, $i); //remplis le tableau de score des gamers
-    $listeNonGamers[] = getTask(2, $i); //remplis le tableau de score des non-gamers
+    $listeGamers[] = getTask(1, $i); //remplis le tableau des tests des gamers
+    $listeNonGamers[] = getTask(2, $i); //remplis le tableau des tests des non-gamers
 }
+
+for ($i = 1; $i < 4; $i++) {
+    $listeCountry[] = getTCountry($i); //remplis le tableau pour nombre de personnes atteintes de problèmes de visions
+}
+
 ?>
 
 
@@ -36,7 +41,7 @@ for ($i = 1; $i < 5; $i++) {
         <h1 class="title2">La concentration</h1>
         <h1 class="title3">Part 3</h1>
         <picture>
-            <img src="img/sound_on" alt="icone son" id="sound">
+            <img src="img/sound_on.png" alt="icone son" id="sound">
         </picture>
         <section class= text>
             <p class="test0_text">Le niveau d'acuite visuel mondial est en baisse. Il s'explique en partie par le nombre croissant des personnes habitants en ville mais aussi par l'omnipresence des ecrans dans la vie quotidienne. Quels moyens avons nous de disponible pour pouvoir reduire la croissance de cette evolution. Il sera sans doute difficile a croire mais les jeux videos peuvent nous aider a ameliorer la vue.</p>
@@ -49,6 +54,9 @@ for ($i = 1; $i < 5; $i++) {
         </div>
         <div class="contain-canvas2">
             <canvas id="concentration"></canvas>
+        </div>
+        <div class="contain-canvas3">
+            <canvas id="visu"></canvas>
         </div>
 
         <div class="containertext">
@@ -273,10 +281,75 @@ for ($i = 1; $i < 5; $i++) {
                 ]
             };
 
-            var graphTarget = $("#concentration");
+            var graphTarget = $("#visu");
 
             var barGraph = new Chart(graphTarget, {
                 type: 'line',
+                data: chartdata,
+                options: {
+                    responsive: true,
+                    legend: {
+                        labels: {
+                            fontColor: 'rgb(255, 255, 255)',
+                            fontSize: 30,
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                fontSize: 14,
+                                fontColor: "white",
+                                beginAtZero: true,
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                fontColor: "white",
+                                fontSize: 14,
+                                stepSize: 1,
+                            }
+                        }],
+                    }
+                }
+            });
+        };
+    </script>
+    <script>
+        $(document).ready(function() {
+            showGraph3();
+        });
+        function showGraph3() {
+
+            var chartdata = {
+                labels: ['1995', '2015', '2050'],
+                datasets: [{
+                        label: 'nombre de personnes en millions',
+                        fill: false,
+                        data: [<?php echo implode($listeCountry, ' , '); ?>], //afficher en php toute les valeurs de la table 5
+                        backgroundColor: [
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            // 'rgba(255, 206, 86, 0.2)',
+                            // 'rgba(255, 206, 86, 0.2))',
+                            // 'rgba(255, 206, 86, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            // 'rgba(75, 192, 192, 1)',
+                            // 'rgba(153, 102, 255, 1)',
+                            // 'rgba(255, 159, 64, 1)'
+                        ],
+                    }
+                ]
+            };
+
+            var graphTarget = $("#concentration");
+
+            var barGraph = new Chart(graphTarget, {
+                type: 'bar',
                 data: chartdata,
                 options: {
                     responsive: true,
