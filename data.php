@@ -62,3 +62,26 @@ function getTask($profile, $nbTest){
    
 }
 
+function getTCountry($nbCountry){
+    $conn = mysqli_connect(HOST, USER, PASSWORD, DATABASE);//connexion à la base de donnée
+    if(!$conn){
+        return false;
+    }
+    if($nbCountry != 0){
+        $query = "SELECT nbr FROM data___feuille_5 WHERE id = $nbCountry";
+    }
+
+    $result = mysqli_query($conn, $query);
+    if(!$result){
+        return false;
+    }
+    $data = $result->fetch_row();
+
+    $finalResult = floatval($data[0]);// récupère le premier et seul résultat de la requête
+
+    mysqli_close($conn);
+    
+    return $finalResult;
+   
+}
+

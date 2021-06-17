@@ -30,6 +30,23 @@ function changeTailleC() {
     rotateDirection.style.fontSize = (5 + countClick * ((minSizeEm - initialSizeEm) / maxClickSizeEm)) + 'em';
 }
 
+function changeTailleCC() {
+    console.log(direction);
+    rotateDirection.style.fontSize = 5 + 'em';
+}
+function changeOpacityCC() {
+    rotateDirection.style.opacity = 1;
+}
+
+function restart() {
+    if (countClick == 4) {
+
+        countClick = 0;
+        changeOpacityCC();
+        changeTailleCC();
+    }
+}
+
 function chooseRight() {
     direction = Math.floor(Math.random() * 4)
     reset()
@@ -69,6 +86,7 @@ function rotate() {
     else if (direction == 3) {
         rotateDirection.classList.add('rotateleft')
     }
+    restart()
     countClick++;
     changeOpacityC();
     changeTailleC();

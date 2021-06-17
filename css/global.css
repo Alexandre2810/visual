@@ -38,15 +38,24 @@ footer {
 #container {
     position: absolute;
     margin: auto;
-    position: absolute;
     height: calc(100% - 80px);
     width: 100%;
     font-family: "Craie";
     color: white;
 }
 
-.contain-canvas {
+.contain-canvas, .contain-canvas2 {
     display: none;
+    position: absolute;
+    top: calc(30%);
+    bottom: 0;
+    left: 50%;
+    height: 40vh;
+    width: 40vw;
+}
+
+.contain-canvasVisu {
+    display: block;
     position: absolute;
     top: calc(30%);
     bottom: 0;
@@ -59,18 +68,12 @@ footer {
     display: block;
 }
 
-.contain-canvas2 {
-    display: none;
-    position: absolute;
-    top: calc(30%);
-    bottom: 0;
-    left: 50%;
-    height: 40vh;
-    width: 40vw;
-}
-
 .show_contain-canvas2 {
     display: block;
+}
+
+.hide_contain-canvas2 {
+    display: none;
 }
 
 
@@ -81,6 +84,7 @@ footer {
     top: 5px;
     left: 5px;
     cursor: pointer;
+    z-index: 6;
 }
 
 #nav_container {
@@ -142,14 +146,7 @@ h1 {
 }
 
 
-#acuity {
-    position: absolute;
-    opacity:1;
-    margin: auto;
-    border: white dotted 1px;
-}
-
-#concentration{
+#acuity, #concentration, #visu{
     position: absolute;
     opacity:1;
     margin: auto;
@@ -158,7 +155,9 @@ h1 {
 
 .disclaimer {
     position: absolute;
-    right: 0;
-    font-style: none;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    font-family: arial;
+    font-size: 0.5em;
 }
-
