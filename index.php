@@ -59,6 +59,9 @@ for ($i = 1; $i < 4; $i++) {
         <div class="contain-canvas2">
             <canvas id="concentration"></canvas>
         </div>
+        <div class="contain-canvas3">
+            <canvas id="visu"></canvas>
+        </div>
 
         <div class="containertext">
             <p id="acuity_text1">A B C D E F</p>
@@ -282,7 +285,7 @@ for ($i = 1; $i < 4; $i++) {
                 ]
             };
 
-            var graphTarget = $("#concentration");
+            var graphTarget = $("#visu");
 
             var barGraph = new Chart(graphTarget, {
                 type: 'line',
